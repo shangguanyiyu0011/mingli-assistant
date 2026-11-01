@@ -1,0 +1,18 @@
+{
+  "mode": "single",
+  "people": [{
+    "person": {"name": "虚构演示者 B", "notes": "完全合成演示，不对应真人。梦境与合作问题均为展示设定，不复用真人或以前个案；无出生资料、照片或地点。"},
+    "birth": null,
+    "dream": "我梦见自己和一位不认识的旅伴，乘小船渡过一条平静的河。到岸边时看见一条蛇钻进草里，我感到惊讶，但并不害怕。"
+  }],
+  "preferences": {
+    "systems": ["meihua", "dream"],
+    "language": "zh-CN",
+    "topic": "创作合作与梦境阅读（完全虚构演示）",
+    "question": "虚构情境：正在考虑参加一个小型创作合作，想了解合作推进中的主动与协作；同时阅读这场梦的具体意象。",
+    "depth": "detailed",
+    "virtual_draws": false,
+    "prepare_engines": false
+  },
+  "method_options": {"meihua": {"numbers": [2, 3, 1]}}
+}

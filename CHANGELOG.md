@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.0.1 — 2026-11-01
+
+新增麻衣相法、独立梅花易数与周公解梦 / Ma Yi terminology, independent Mei Hua, and classical dream lookup.
+
+- 麻衣与原有面相共用照片，补三庭五官的传统名称、来源及原照标注说明。
+- 梅花数字法与年月日时法独立保存本互变、动爻和体用五行，保留原六爻及已选牌。
+- 逐人选填梦境，检索固定版本《周公解夢》27章988条原文，附出处；不以梦或词条命中充当命盘证据。
+- 单独解梦和明确只选梅花可不填生日；缺生日的综合任务保留相应方法待补。
+- 中英日韩字段、方法名和报告标签，A/B隔离与重新下载的最新梦境状态。
+- 27类入口：20类计算/抽取/历表、2类照片观察、4类资料参考、1类古文梦境检索。
+- 固定开源提交、完整梅花 MIT 许可、古文公有领域标识及数据摘要；外部技能指令未安装或执行。
+
+All new demonstrations are fictional. Existing six-method screenshots remain a separate fictional example.
+
+
 ## 1.0.0 — 2026-11-01
 
 First public release / 首个公开版本。

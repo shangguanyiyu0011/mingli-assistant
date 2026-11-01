@@ -36,6 +36,8 @@ overview = validate_synthesis(pair_agent_json, records, "pair", comparison=actua
 
 coverage 从真实 report panels 逐项生成，保留全部选中方法，包括已算、部分、待补、资料、观察及不可用状态。ready/partial 计入已算；未准备引擎、未完成输入、资料入口与观察不会伪装成计算依据。部分姓名结果若已有真实五格、但仍缺读音等条件，可按已有计算部分引用。
 
+`dream` 即使已完成真实古文检索、面板为ready，仍归 `kind=reference`、`calculated=false`；梦境自述、匹配词与古文不计入命盘结果覆盖，也不能当作主题的计算basis。梅花易数 `meihua` 使用自己的实际卦象和体用结果，不能用另一份六爻的结果哈希替代。麻衣仍属于 `face` 的观察，不加入人生预测综合。
+
 highlights 只读取固定白名单的实际字段，例如日主、数秘归约数、本命宿、命宫、太阳星座、卦名、棋课名。字段不存在或为 null 时不补造。value 直接来自其 payload pointer，不从姓名、照片或履历推断特征，也不生成新的健康、人格、命运或匹配指标。
 
 哈希绑定范围包括：

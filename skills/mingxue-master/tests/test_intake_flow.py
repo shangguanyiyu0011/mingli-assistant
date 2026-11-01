@@ -132,7 +132,7 @@ class FormPolicyTests(unittest.TestCase):
 
     def test_all_25_selected_keep_every_entry_and_missing_methods_are_deferred(self):
         systems = [item["id"] for item in intake.registry()]
-        self.assertEqual(len(systems), 25)
+        self.assertEqual(len(systems), 27)
         flow = intake.plan_request(request(systems=systems))["people"][0]["workflow_input"]
         self.assertEqual(flow["systems"], systems)
         self.assertEqual(set(flow["deferred"]), set(systems) - {"bazi", "numerology", "sukuyo"})
@@ -298,7 +298,7 @@ class ActualReportTests(unittest.TestCase):
             job = self.assert_public_files(root, result, ["personal-a.html"])
             self.assertEqual(result["status"], "partial")
             source, _, payloads = committed(job)
-            self.assertEqual(len(payloads), 25)
+            self.assertEqual(len(payloads), 27)
             for system in source["deferred"]:
                 self.assertEqual(payloads[system]["status"], "needs_input", system)
                 self.assertNotIn("cast_record", payloads[system])

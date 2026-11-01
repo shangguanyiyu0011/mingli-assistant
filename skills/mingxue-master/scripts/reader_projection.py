@@ -6,8 +6,8 @@ import re
 from pathlib import Path
 
 NAMES={"bazi":"八字四柱","ziwei":"紫微斗数","astrology":"西方占星","vedic":"印度占星·基本星位",
-       "names":"姓名学","numerology":"数秘","iching":"周易","tarot":"塔罗","electional":"择日",
-       "palm":"手相","face":"面相","fengshui":"风水","qimen":"奇门遁甲","liuren":"大六壬","human_design":"人类图",
+       "names":"姓名学","numerology":"数秘","iching":"周易","meihua":"梅花易数","dream":"周公解梦","tarot":"塔罗","electional":"择日",
+       "palm":"手相","face":"面相·麻衣相法","fengshui":"风水","qimen":"奇门遁甲","liuren":"大六壬","human_design":"人类图",
        "xiaoliuren":"小六壬","jinkoujue":"金口诀","qizheng":"七政四余","taiyi":"太乙神数","sukuyo":"宿曜",
        "yilin":"焦氏易林","lingqijing":"灵棋经","lenormand":"雷诺曼","geomancy":"西方土占","horary":"问事占星"}
 INTERNAL=re.compile(r"本模块|本算法|本方法|逐项|解释|口径|容许度|结构标记|输入|输出|原始数据|适配器|哈希|权限|接口|前端|后端|缓存|数据结构|端点|调用|鉴权|序列化|渲染|命令行|运行时|客户端|服务端|占位符|\b(?:payload|provider|schema|scope|sha256|workbench|api|json|backend|frontend|endpoint|permission)\b",re.I)

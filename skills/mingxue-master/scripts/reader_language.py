@@ -59,7 +59,7 @@ def resolve_report_language(request):
     detected=detect_prose_language(question)
     if detected:
         return detected
-    notes="\n".join(person.get("person",{}).get("notes","") for person in request.get("people",[]))
+    notes="\n".join(person.get("person",{}).get("notes","")+"\n"+person.get("dream","") for person in request.get("people",[]))
     return detect_prose_language(notes) or preferences.get("ui_language","zh-CN")
 
 
@@ -200,7 +200,7 @@ def _calculated(record):
     if not isinstance(report,dict) or not isinstance(report.get("panels"),list):
         return set()
     return {panel["system"] for panel in report["panels"] if isinstance(panel,dict) and
-            isinstance(panel.get("system"),str) and panel.get("state") in ("ready","partial")}
+            isinstance(panel.get("system"),str) and panel["system"]!="dream" and panel.get("state") in ("ready","partial")}
 
 
 def _duplicate_body(text,path,seen,language="zh-CN"):

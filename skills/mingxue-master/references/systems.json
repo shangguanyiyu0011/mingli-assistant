@@ -29,12 +29,11 @@
     },
     {
       "id": "iching",
-      "name": "周易、六爻结构与梅花",
+      "name": "周易六爻",
       "aliases": [
         "周易",
         "易经",
-        "六爻",
-        "梅花"
+        "六爻"
       ],
       "level": "calculation",
       "reference": "references/systems/iching.md",
@@ -194,10 +193,14 @@
     },
     {
       "id": "face",
-      "name": "面相图像与传统术语",
+      "name": "面相·麻衣相法",
       "aliases": [
         "面相",
-        "相术"
+        "相术",
+        "mayi",
+        "麻衣",
+        "麻衣相法",
+        "麻衣神相"
       ],
       "level": "visual_guidance",
       "reference": "references/systems/face.md",
@@ -456,6 +459,45 @@
       "prepare": "prepare_astrology.py",
       "prefix": [
         "horary"
+      ]
+    },
+    {
+      "id": "meihua",
+      "name": "梅花易数",
+      "aliases": [
+        "梅花",
+        "梅花易数",
+        "梅花易數"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/meihua.md",
+      "inputs": [
+        "两个或三个报数，或明确提问日期钟点与时区"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "meihua"
+      ]
+    },
+    {
+      "id": "dream",
+      "name": "周公解梦",
+      "aliases": [
+        "解梦",
+        "周公解梦",
+        "周公解夢",
+        "dream interpretation"
+      ],
+      "level": "reference_only",
+      "reference": "references/systems/dream.md",
+      "inputs": [
+        "本人梦境描述"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "dream"
       ]
     }
   ]

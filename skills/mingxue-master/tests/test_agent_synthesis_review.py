@@ -175,7 +175,7 @@ class AgentSynthesisIncrementalReview(unittest.TestCase):
         value=request('all');plan=intake_flow.plan_request(value)
         from fortune import registry
         ids={x['id'] for x in registry()}
-        self.assertEqual(len(ids),25)
+        self.assertEqual(len(ids),27)
         for item in plan['people']:
             flow=item['workflow_input'];self.assertEqual(set(flow['systems']),ids)
             self.assertIsNone(flow['birth']['time'])

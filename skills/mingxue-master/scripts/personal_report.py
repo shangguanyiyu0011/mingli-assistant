@@ -56,7 +56,7 @@ def panels(report, payloads, person_index=None):
             visual = {} if system=='names' and payload.get('mode')=='international' else diagram(system, payload, spec)
         except (ValueError, KeyError, TypeError, IndexError):
             visual = None
-        if panel["state"] in ("reference_only", "intake_only"):
+        if panel["state"] in ("reference_only", "intake_only") or system=="dream" and not payload.get("matches"):
             visual = None
         plain_condition=condition(system,payload)
         limits=[translate(plain_condition)] if plain_condition else []

@@ -4,12 +4,22 @@
 
 This example is entirely synthetic. No real person, prior case, photograph, or personal annotation was used. The report's life situations are hypothetical and its traditional symbolism does not establish predictive validity.
 
+## 1.0.1 新增方法示例 / New oracle example
+
+另设“虚构演示者 B”，没有生日、地点或照片。梅花采用明确数字 `[2,3,1]`，实际为泽火革初爻动、之卦泽山咸、互卦天风姤，体兑金、用离火。梦境中的旅伴、渡河、船与蛇全部新设，检索真实古文后分别阅读；梦境与词条不作为独立预测证据。
+
+- [新示例请求](synthetic-oracles-request.json)、[完整离线 HTML](oracles-demo.html)、[5页 PDF](oracles-demo.pdf)。
+- [预览与摘要记录](oracles-preview-provenance.json)：PDF第4页为[梅花](../docs/screenshots/meihua.png)，第5页为[解梦](../docs/screenshots/dream.png)，均为180 DPI实页。
+- 实际流程完成两种方法的正文绑定及针对性总结；119个文字块、18段源正文无缺漏。原六方法示例保持独立，不以旧真人案例改名生成新示例。
+
+This second example is also fully fictional. It uses no birthday, location, photos, or prior personal case. Mei Hua uses explicitly supplied numbers; the dream section remains textual reference material. Both HTML and PDF were produced through the actual report workflow. Screenshots are full PDF pages, not browser mockups.
+
 - [示例请求](synthetic-request.json)：公开的固定演示资料。
 - [完整报告 PDF](demo-report.pdf)：14 页，含六种方法、六个生活主题和三条行动建议；文字可选择、检索。
 - [逐方法正文及绑定](synthetic-readings.json)、[六主题综合及绑定](synthetic-synthesis.json)：本次 Agent 根据实际结果新写的正文，供查看生成链条。
 - [预览来源记录](preview-provenance.json)：PDF 与 PNG 的 SHA-256、页码和图片尺寸。
 
-## 演示资料
+## 六方法示例 A 的资料
 
 | 项目 | 固定设定 |
 | --- | --- |
@@ -56,7 +66,7 @@ $readings = Join-Path $repo 'examples/synthetic-readings.json'
 
 ## 预览与 PDF 页码
 
-所有预览为 180 DPI、1489 × 2105 的完整页面；每页页眉均保留“演示人物 A（虚构）”。
+下面六张示例 A 预览为 180 DPI、1489 × 2105 的完整页面；每页页眉均保留“演示人物 A（虚构）”。新增示例 B 的页码另见上节。
 
 | PNG | PDF 页码 | 内容 |
 | --- | ---: | --- |

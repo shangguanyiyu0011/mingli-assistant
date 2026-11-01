@@ -270,7 +270,7 @@ def diagram(system, result, spec):
         if len(variants) > 1:
             base_view.update(variants=variants, variant_mode="views")
         return base_view
-    if system == "iching":
+    if system in ("iching", "meihua"):
         hexagrams = []
         rows = result.get("lines_bottom_to_top", [])
         for kind, label in (("base", "本卦"), ("changed", "之卦"), ("nuclear", "互卦")):
@@ -283,8 +283,11 @@ def diagram(system, result, spec):
             else:
                 lines = [{"yang": bool(int(b)), "moving": False, "label": str(i+1)} for i, b in enumerate(bits)]
             hexagrams.append({"title": label, "name": h.get("name", ""), "number": h.get("number"), "lines": lines})
-        return view("hexagrams", title, {"hexagrams": hexagrams}, notes=notes,
-                    metrics=[metric("动爻", "、".join(map(str, result["moving_positions"])) or "无"), metric("爻序", "初爻在下")])
+        metrics=[metric("动爻", "、".join(map(str, result["moving_positions"])) or "无"), metric("爻序", "初爻在下")]
+        if system == "meihua":
+            bu=result["body_use"]
+            metrics += [metric("体卦", bu["body"]["name"]+" · "+bu["body"]["element"]), metric("用卦", bu["use"]["name"]+" · "+bu["use"]["element"]), metric("体用关系", {"same_element":"比和", "source_generates_target":"体生用", "target_generates_source":"用生体", "source_controls_target":"体克用", "target_controls_source":"用克体"}[bu["relation"]])]
+        return view("hexagrams", title, {"hexagrams": hexagrams}, notes=notes, metrics=metrics)
     if system == "tarot":
         return view("cards", result.get("spread_name", title), {"cards": [{"label": c["name"], "id": c["id"],
                     "position": c["position"], "keywords": [c["theme"]], "orientation": c["orientation"]} for c in result["cards"]],
@@ -313,6 +316,9 @@ def diagram(system, result, spec):
 
 
 def extra_diagram(system, r, title, notes):
+    if system == "dream":
+        return view("board", title, {"cells":[{"label":e["chapter"], "value":e["text"],
+            "items":e["matched_keywords"], "active":False} for e in r["matches"]], "columns":2}, notes=notes)
     if system in ("qizheng", "horary"):
         def wheel(c):
             w = c.get("wheel") or {}

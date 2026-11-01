@@ -9,6 +9,7 @@
 *.cmd text eol=crlf
 *.png binary
 *.jpg binary
+*.pdf binary
 *.svg text eol=lf
 *.zip.part* binary
 # Classical tables have fixed byte-level SHA-256 checksums.

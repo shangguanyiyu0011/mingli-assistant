@@ -21,7 +21,7 @@ class VisualContractTests(unittest.TestCase):
         cls.results={k:calculate(k,v['example']) for k,v in cls.specs.items()}
 
     def test_all_twenty_five_examples_have_method_specific_fields(self):
-        self.assertEqual(25,len(self.specs))
+        self.assertEqual(27,len(self.specs))
         for spec in self.specs.values():
             self.assertTrue(spec['fields'])
             safe_params(spec['id'],spec['example'])

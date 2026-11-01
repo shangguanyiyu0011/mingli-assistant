@@ -48,7 +48,7 @@ def utc_instant(value):
 def pending_places(request):
     pending=[]
     for index,person in enumerate(request["people"]):
-        if person.get("birthplace") and (not person.get("location") or not person["birth"].get("timezone")):
+        if person.get("birth") and person.get("birthplace") and (not person.get("location") or not person["birth"].get("timezone")):
             pending.append({"person_index":index,"system":"place_lookup","question":person["person"]["name"]+"的出生地点待自动核实："+person["birthplace"],
                             "required_inputs":[f"people[{index}].birthplace"],"optional":False})
     pref=request["preferences"];cast=pref.get("cast") or {}
@@ -239,7 +239,7 @@ def resolve_request(request, *, cache_dir=None):
                 target[key]=match[key]
 
     for index,person in enumerate(native["people"]):
-        if person.get("birthplace"):
+        if person.get("birth") and person.get("birthplace"):
             match=resolve(person["birthplace"],f"people[{index}].birthplace")
             if match:
                 fill(person["location"],match,("latitude","longitude"),"出生地点")

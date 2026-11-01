@@ -90,7 +90,7 @@ def describe(job):
 
 def describe_snapshot(root,request,records):
     from report_synthesis import synthesis_context
-    comprehensive=len({panel["system"] for record in records for panel in record["report"]["panels"] if panel["state"] in ("ready","partial")})>1
+    comprehensive=len({panel["system"] for record in records for panel in record["report"]["panels"] if panel["system"]!="dream" and panel["state"] in ("ready","partial")})>1
     people=[]
     for record in records:
         report=record["report"]

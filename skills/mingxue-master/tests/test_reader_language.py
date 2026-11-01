@@ -46,6 +46,15 @@ def overview(long=True):
 
 
 class PlainReaderTextTests(unittest.TestCase):
+    def test_dream_does_not_add_synthesis_depth_but_its_own_prose_is_audited(self):
+        value=record(systems=("meihua","dream"))
+        self.assertEqual(reader._calculated(value),{"meihua"})
+        self.assertEqual(reader.audit_reader_report([value],{"A":overview(False)},detailed=True),[])
+        for text in ("", "这份日表只涉及提问当天，没有比较其他日期，也没有时辰表。"):
+            value["report"]["panels"][1]["traditional_interpretation"]["text"]=text
+            issues=reader.audit_reader_report([value],{},detailed=True)
+            self.assertTrue(any(v.get("system")=="dream" for v in issues),issues)
+
     def test_clear_internal_phrases_are_blocked_without_banning_ordinary_words(self):
         for phrase in ("本模块","本算法","本方法","逐项","解释","口径","容许度","结构标记","输入","输出",
                        "payload","provider","schema","scope","SHA256","哈希","合成版式","版式演示","原始数据","未实现","当前实现","适配器",

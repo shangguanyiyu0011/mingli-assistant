@@ -7,6 +7,7 @@ EXTRA_MODULES = {
     "qizheng": "astral_methods", "horary": "astral_methods", "taiyi": "taiyi",
     "yilin": "classic_oracles", "lingqijing": "classic_oracles",
     "lenormand": "oracles", "geomancy": "oracles",
+    "meihua": "new_oracles", "dream": "new_oracles",
 }
 
 
@@ -53,7 +54,7 @@ def catalog():
              field("leap", "农历闰月", "checkbox", show_when={"calendar": ["lunar"]}),
              select("gender", "用于起运的性别", [("", "不提供（不计算性别相关起运）"), ("male", "男"), ("female", "女")], ""),
              select("sect", "换日规则", [(2, "00:00 换日"), (1, "23:00 换日")], 2), question()], birth),
-        item("iching", "周易六爻 · 梅花", "东方术数", "本卦、之卦、互卦与动爻；纳甲采用独立起卦时刻。",
+        item("iching", "周易六爻", "东方术数", "本卦、之卦、互卦与动爻；纳甲采用独立起卦时刻。",
              [select("method", "起卦方式", [("coins", "虚拟三钱法"), ("manual", "输入实际六爻"), ("meihua", "梅花数字法")], "coins"),
               field("lines", "六爻（初爻在前）", placeholder="7, 8, 9, 7, 8, 6", show_when={"method": ["manual"]}, required=True),
               field("numbers", "起卦数字", placeholder="两个或三个非负整数", show_when={"method": ["meihua"]}, required=True),
@@ -92,7 +93,7 @@ def catalog():
     ]
     reference_specs = [
         ("palm", "手相观察", "观察与资料", "记录用户可见观察与一般传统术语，不从外貌推断人格、健康或寿命。", "visual_guidance"),
-        ("face", "面相术语", "观察与资料", "保留观察记录；自动图像识别和个人命运推断不在本地工具能力内。", "visual_guidance"),
+        ("face", "面相·麻衣相法", "观察与资料", "保留观察记录；自动图像识别和个人命运推断不在本地工具能力内。", "visual_guidance"),
         ("fengshui", "风水空间资料", "观察与资料", "围绕真实平面、朝向与使用条件阅读传统资料。", "reference_only"),
         ("qimen", "奇门遁甲资料", "东方术数", "阅读已有盘及明确起局规则；本版保留资料入口。", "reference_only"),
         ("liuren", "大六壬资料", "东方术数", "阅读用户已有四课三传，与新增小六壬和金口诀分别处理。", "reference_only"),
@@ -127,6 +128,14 @@ def catalog():
         item("horary", "卜卦占星", "星象与历法", "按提问时空排盘，展示七曜尊贵、相位和入相出相结构。",
              clock_fields(location=True) + [select("house_system", "宫制", [("R", "雷吉奥蒙塔努斯"), ("P", "普拉西德"), ("W", "整宫制")], "R"), question()],
              {**event, **geo, "house_system": "R"}, "external_engine", prepare="astrology", is_new=True),
+    ])
+    systems.extend([
+        item("meihua", "梅花易数", "东方术数", "明确报数或提问时刻，展示本互变、动爻与体用五行。",
+             [field("numbers", "起卦数字（选填）", placeholder="两个或三个非负整数；与时间法分开填写"),
+              field("date", "提问日期", "date"), field("time", "提问钟点", "time"), field("timezone", "提问时区"),
+              field("fold", "重复钟点候选（选填）", "number", min=0, max=1), question()], {"numbers":"2,3,1"}),
+        item("dream", "周公解梦", "观察与资料", "按本人梦境检索27章988条古文，并保留词条来源。",
+             [field("text", "梦境描述", "textarea", required=True, maxLength=4000)], {"text":"梦见一条蛇游进水里。"}, "reference_only"),
     ])
     extra_forms(systems)
     return {"version": VERSION, "systems": deepcopy(systems)}

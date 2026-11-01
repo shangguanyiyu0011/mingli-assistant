@@ -59,7 +59,7 @@ launch.cmd workflow status --workspace <同一项目目录>
 - 经纬度不推断。`birth.longitude` 与 `location.longitude` 同时给出时必须一致；纬度仅用于占星，不塞进canonical出生JSON。
 - 预设给默认计算参数，显式 `birth` 参数优先。`settings` 是明确预设覆写，按 [预设说明](presets.md) 校验；不能把参数集合冒称全派理论。
 - 报告的 `selected_profile` 记录所选默认组合，`effective_settings` 从实际出生盘与适配器结果记录本次采用规则。紫微流运先取预设的 `horoscope_divide`，显式 `options.ziwei.horoscope_divide` 优先。
-- 原生`systems:auto`：有出生资料选八字；已知时间且非姓名专题加紫微；非姓名专题加占星。给姓名则加姓名；给独立卦、牌、日期表或图像输入才加对应模块。也可显式指定25类中的任意入口。Agent资料规划层会进一步按真实可用输入选择体系，见[资料规划](intake.md)。
+- 原生`systems:auto`：有出生资料选八字；已知时间且非姓名专题加紫微；非姓名专题加占星。给姓名则加姓名；给独立卦、牌、日期表或图像输入才加对应模块。也可显式指定27类中的任意入口。Agent资料规划层会进一步按真实可用输入选择体系，见[资料规划](intake.md)。
 - `compare_profiles` 最多4个，分别真实重算相关体系。不能证明同一出生输入或所查流运目标不同时，返回比较不可用，不强行合盘。
 
 ### 姓名与候选

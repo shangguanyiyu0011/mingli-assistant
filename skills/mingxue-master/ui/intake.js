@@ -191,15 +191,19 @@ function personFields(i) {
           <div id="${p}-name-international" hidden><label>拉丁字母拼写（选填）<input id="${p}-name-latin" maxlength="160" placeholder="只填写本人使用的拼写，不自动音译。"><span class="hint">使用英文字母、空格、直撇号或连字符；不确定就留空。</span></label><label>姓名读音（选填）<input id="${p}-name-pronunciation" maxlength="240"></label></div>
         </div>
       </div>
-      <label>出生日期 <span class="req">*</span><input type="date" id="${p}-date" required></label>
+      <label>出生日期 <span class="req" id="${p}-birth-required">*</span><input type="date" id="${p}-date" required></label>
       <label>你填写的是哪种生日？<select id="${p}-calendar"><option value="solar">阳历／公历（身份证常用）</option><option value="lunar">阴历／农历（家里说的生日）</option></select></label>
-      <label>出生地点 <span class="req">*</span><input id="${p}-birthplace" maxlength="200" placeholder="例如：杭州市西湖区，浙江省；国外写国家和城市" required><span class="hint">写城市或区县即可，不需要门牌号；坐标和时区由 AI 查询。</span></label>
+      <label>出生地点 <span class="req" id="${p}-place-required">*</span><input id="${p}-birthplace" maxlength="200" placeholder="例如：杭州市西湖区，浙江省；国外写国家和城市" required><span class="hint">写城市或区县即可，不需要门牌号；坐标和时区由 AI 查询。</span></label>
       <label>出生时间知道多少？<select id="${p}-time-kind"><option value="unknown">不知道，继续填写</option><option value="exact">知道具体几点几分</option><option value="shichen">只知道时辰（两小时一段）</option></select></label>
       <label>性别 <span class="hint">选填，部分传统排盘会用到</span><select id="${p}-gender"><option value="">暂不提供</option><option value="male">男</option><option value="female">女</option></select></label>
       <label id="${p}-time-field" hidden>具体出生时间<input type="time" id="${p}-time"><span class="hint">填写出生地当时的当地时间，不需要换算。</span></label>
       <label id="${p}-shichen-field" hidden>知道的是哪个时辰？<select id="${p}-shichen"><option value="">请选择知道的时辰</option>${shichen.map(([name,hours])=>`<option value="${name}">${name}时（${hours}）</option>`).join('')}</select><span class="hint">只保留这段时间，不替你填写具体分钟。子时跨午夜，会保留日期边界的不确定。</span></label>
     </div>
     <label class="check leap-row" id="${p}-leap-row" hidden><input type="checkbox" id="${p}-leap">家人明确说是农历闰月</label>
+    <div class="details dream-section">
+      <label>梦境描述 <span class="heading-hint">选填</span><textarea id="${p}-dream" rows="3" maxlength="4000" placeholder="梦见了什么？写下人物、场景、经过，以及醒来后的感受。"></textarea></label>
+      <p class="hint">填写梦境即可做周公解梦，不需要出生日期或地点。</p>
+    </div>
     <div class="photo-section">
       <h3>手掌与面部照片 <span class="heading-hint">选填</span></h3>
       <p class="hint">选好照片后就会添加。没有照片也可以继续，不需要自己描述掌纹或面部特征。</p>
@@ -229,6 +233,27 @@ function updateDraws(){if(drawsReady)window.MingxueDraws?.update(drawActive(),{p
 function mode(){return document.querySelector('input[name="mode"]:checked').value;}
 function systemMode(){return document.querySelector('input[name="systems-mode"]:checked').value;}
 function selectedSystems(){return [...document.querySelectorAll('#system-list input:checked')].map(e=>e.value);}
+const timedSystems=new Set(['meihua','iching','qimen','liuren','jinkoujue','xiaoliuren','taiyi','electional','horary']);
+function birthOptional(p){
+  if(fieldValue(p+'-dream'))return true;
+  const chosen=selectedSystems();
+  return systemMode()==='custom'&&chosen.includes('meihua')&&chosen.every(id=>['meihua','dream'].includes(id));
+}
+function needsCast(){
+  if(systemMode()==='custom')return selectedSystems().some(id=>timedSystems.has(id));
+  const people=mode()==='pair'?['a','b']:['a'];
+  return !!fieldValue('question')&&!people.every(p=>fieldValue(p+'-dream')&&!fieldValue(p+'-date'));
+}
+function updateBirthRequirements(p){
+  const optional=birthOptional(p),date=!!fieldValue(p+'-date');
+  $(p+'-date').required=!optional;$(p+'-birthplace').required=!optional||date;
+  $(p+'-birth-required').hidden=optional;$(p+'-place-required').hidden=optional&&!date;
+}
+function updateCastFields(){
+  const needed=needsCast();$('question-place').hidden=!needed;
+  $('cast-place').disabled=!needed||$('cast-same-birthplace').checked;
+  $('cast-past-field').hidden=fieldValue('cast-when')!=='past';
+}
 const compoundSurnames=new Set('欧阳 司马 上官 诸葛 夏侯 皇甫 尉迟 公羊 澹台 公冶 宗政 濮阳 淳于 单于 太叔 申屠 公孙 仲孙 轩辕 令狐 钟离 宇文 长孙 慕容 司徒 司空 亓官 司寇 子车 端木 巫马 公西 颛孙 壤驷 公良 漆雕 乐正 宰父 谷梁 拓跋 夹谷 南宫 东郭 西门 梁丘 左丘 东门 百里 呼延 万俟 赫连 独孤 闻人 第五'.split(' '));
 function namingFor(p){
   if(!$(p+'-analyze-name').checked)return null;
@@ -270,9 +295,8 @@ function update(){
   if(current==='all')boxes.forEach(e=>e.checked=true);if(current==='auto')boxes.forEach(e=>e.checked=false);
   boxes.forEach(e=>e.disabled=!custom);if(custom)customChosen=new Set(selectedSystems());lastSystemMode=current;
   $('system-list').hidden=!custom;
-  $('question-place').hidden=!fieldValue('question');
-  $('cast-place').disabled=$('cast-same-birthplace').checked;
-  $('cast-past-field').hidden=fieldValue('cast-when')!=='past';
+  for(const p of ['a','b'])updateBirthRequirements(p);
+  updateCastFields();
   updateDraws();
 }
 function drawSystems(){
@@ -312,22 +336,27 @@ $('question-presets').addEventListener('click',event=>{
 });
 
 function collectPerson(p){
-  const name=fieldValue(p+'-name'),date=fieldValue(p+'-date'),birthplace=fieldValue(p+'-birthplace'),label=p==='a'?'第一人':'第二人';
-  if(!name||!date||!birthplace)throw Error(`${label}请填写姓名或称呼、出生日期和出生地点。`);
-  const calendar=fieldValue(p+'-calendar'),match=/^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
-  if(!match||Number(match[1])<1583||Number(match[2])<1||Number(match[2])>12||Number(match[3])<1||Number(match[3])>(calendar==='lunar'?30:31))throw Error('请核对出生日期，按年、月、日填写。');
-  const birth={date,calendar,time:null},kind=fieldValue(p+'-time-kind'),gender=fieldValue(p+'-gender');
-  if(kind==='exact'){const time=fieldValue(p+'-time');if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(time))throw Error(`${label}请选择具体出生时间，或者改成“不知道”。`);birth.time=time;}
-  else if(kind==='shichen'){const value=fieldValue(p+'-shichen');if(!shichen.some(([name])=>name===value))throw Error(`${label}请选择知道的时辰，或者改成“不知道”。`);birth.shichen=value;}
-  else if(kind!=='unknown')throw Error('请选择出生时间知道多少。');
-  if(gender)birth.gender=gender;if(calendar==='lunar')birth.leap=$(p+'-leap').checked;
+  const name=fieldValue(p+'-name'),date=fieldValue(p+'-date'),birthplace=fieldValue(p+'-birthplace'),dream=fieldValue(p+'-dream'),label=p==='a'?'第一人':'第二人';
+  if(!name||!birthOptional(p)&&(!date||!birthplace))throw Error(`${label}请填写姓名或称呼、出生日期和出生地点。`);
+  if(dream.length>4000)throw Error('梦境描述请控制在4000字以内。');
+  let birth=null;
+  if(date){
+    if(!birthplace)throw Error(`${label}请填写出生地点，或留空出生日期。`);
+    const calendar=fieldValue(p+'-calendar'),match=/^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
+    if(!match||Number(match[1])<1583||Number(match[2])<1||Number(match[2])>12||Number(match[3])<1||Number(match[3])>(calendar==='lunar'?30:31))throw Error('请核对出生日期，按年、月、日填写。');
+    birth={date,calendar,time:null};const kind=fieldValue(p+'-time-kind'),gender=fieldValue(p+'-gender');
+    if(kind==='exact'){const time=fieldValue(p+'-time');if(!/^([01]\d|2[0-3]):[0-5]\d$/.test(time))throw Error(`${label}请选择具体出生时间，或者改成“不知道”。`);birth.time=time;}
+    else if(kind==='shichen'){const value=fieldValue(p+'-shichen');if(!shichen.some(([name])=>name===value))throw Error(`${label}请选择知道的时辰，或者改成“不知道”。`);birth.shichen=value;}
+    else if(kind!=='unknown')throw Error('请选择出生时间知道多少。');
+    if(gender)birth.gender=gender;if(calendar==='lunar')birth.leap=$(p+'-leap').checked;
+  }
   const selectedWellbeing=readWellbeing(p);wellbeingDrafts[p][wellbeingTopic]=selectedWellbeing;
   const selfReported=wellbeingQuestions().flatMap(([id,label])=>{
     const value=selectedWellbeing[id];
     return value?[tr(label)+'：'+tr(value)]:[];
   });
   const person={name},notes=[fieldValue(p+'-notes'),selfReported.length?tr('本人自述（心理与近况｜{topic}）',{topic:tr(wellbeingTopics[wellbeingTopic][0])})+'\n'+selfReported.join('\n'):''].filter(Boolean).join('\n\n');if(notes)person.notes=notes;
-  const out={person,birth,birthplace},naming=namingFor(p);if(naming)out.name=naming;
+  const out={person,birth},naming=namingFor(p);if(birthplace)out.birthplace=birthplace;if(dream)out.dream=dream;if(naming)out.name=naming;
   if(photos[p].length)out.photos=photos[p].map(x=>({...x.ref}));
   return out;
 }
@@ -339,7 +368,7 @@ function collect(){
   const question=fieldValue('question'),preferences={systems:selected,question,depth:'detailed',answers:{},virtual_draws:$('virtual-draws').checked,prepare_engines:false,ui_language:uiLanguage(),language:'auto'};
   if(m==='pair')preferences.relationship=relationship;
   for(const [id,label] of [['answer-background','事情背景'],['answer-uncertainty','补充或不确定说明']]){const value=fieldValue(id);if(value)preferences.answers[label]=value;}
-  if(question){
+  if(needsCast()){
     const place=$('cast-same-birthplace').checked?people[0].birthplace:fieldValue('cast-place');
     if(!place)throw Error('请写下这次提问所在的城市，或勾选“我现在就在出生地”。');
     preferences.cast_place=place;
@@ -413,7 +442,7 @@ if(agentMode){
   $('guide-last').textContent=offlineMode?'下载资料包，发回对话':'提交后回到对话继续';
 }
 $('draw-options').addEventListener('toggle',()=>{if(!$('draw-options').open)return;if(!drawsReady&&window.MingxueDraws){window.MingxueDraws.init($('intake-draws'),{backUrl:window.MingxueArt?.card_back?.src||''});drawsReady=true;}updateDraws();});
-$('question').addEventListener('input',()=>{$('question-place').hidden=!fieldValue('question');updateDraws();});$('intake').addEventListener('input',e=>{const p=e.target.id?.slice(0,1);if(['a','b'].includes(p)&&['-name','-surname-confirm','-name-latin','-name-pronunciation'].some(s=>e.target.id===p+s))updateName(p);});update();
+$('question').addEventListener('input',()=>{updateCastFields();updateDraws();});$('intake').addEventListener('input',e=>{const p=e.target.id?.slice(0,1);if(['a','b'].includes(p)){if(['-name','-surname-confirm','-name-latin','-name-pronunciation'].some(s=>e.target.id===p+s))updateName(p);if(['-dream','-date'].some(s=>e.target.id===p+s)){updateBirthRequirements(p);updateCastFields();}}});update();
 $('ui-language').addEventListener('change',()=>window.MingxueI18n?.setLanguage($('ui-language').value));
 window.MingxueI18n?.subscribe(language=>{
   $('ui-language').value=language;

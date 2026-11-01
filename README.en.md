@@ -6,7 +6,7 @@ A plugin for agents that can work with local files and scripts. It includes a Ch
 
 ## Downloads and fictional previews
 
-[Download release 1.0](https://github.com/shangguanyiyu0011/mingli-assistant/releases/tag/v1.0.0) · [Fictional example PDF](examples/demo-report.pdf) · [Example input](examples/synthetic-request.json)
+[Download release 1.0](https://github.com/shangguanyiyu0011/mingli-assistant/releases/tag/v1.0.1) · [Fictional example PDF](examples/demo-report.pdf) · [Example input](examples/synthetic-request.json)
 
 These are pages from an **actually generated Chinese report for a fictional person**. The identity, birth details, question, and card sequences were created for this demo. No real user's photos or case materials are included. The intake supports four languages; report language follows the submitted material.
 
@@ -20,9 +20,15 @@ These are pages from an **actually generated Chinese report for a fictional pers
 
 [How the fictional demo was made](examples/README.md)
 
+| Mei Hua — fictional | Dream lookup — fictional |
+| --- | --- |
+| ![Fictional Mei Hua example](docs/screenshots/meihua.png) | ![Fictional dream lookup example](docs/screenshots/dream.png) |
+
+[New-method example PDF](examples/oracles-demo.pdf) · [Offline HTML](examples/oracles-demo.html). A second entirely fictional subject, with no birthday, place, or photos.
+
 ## Methods included
 
-There are **25 entry points**: 19 calculation, draw, or calendar methods, two photo-observation sections, and four reference-only sections. Reports include applicable methods with sufficient material. The count does not mean every report includes all 25, or that the reference-only sections have automatic chart engines.
+There are **27 entry points**: 20 calculation, draw, or calendar methods, two photo-observation sections, four existing-material references, and one classical dream-text lookup. Reports include applicable methods with sufficient material; the reference sections do not claim automatic chart engines.
 
 ### Birth, names, and numbers — eight methods
 
@@ -37,11 +43,12 @@ There are **25 entry points**: 19 calculation, draw, or calendar methods, two ph
 | Numerology | Life Path, explicitly selected Personal Year, and Latin-letter Name Expression | Birthday; optional year and user-supplied Latin name |
 | Name analysis | Han character form/readings, modern dictionary strokes, Five Grids/Three Talents; international writing and Latin-name numbers | Explicitly requested name analysis and the actual name spelling |
 
-### Questions, cards, oracles, and dates — eleven methods
+### Questions, cards, oracles, and dates — twelve methods
 
 | Method | Available content | Material needed |
 | --- | --- | --- |
-| I Ching, Six Lines, and Plum Blossom | Base/changed/nuclear/opposite/reversed hexagrams, moving lines, and basic Na Jia/day-month structure | Actual line values, existing hexagram, or an explicit casting method |
+| I Ching and Six Lines | Base/changed/nuclear/opposite/reversed hexagrams, moving lines, and basic Na Jia/day-month structure | Actual line values, existing hexagram, or an explicit casting method |
+| Mei Hua / Plum Blossom | Two/three numbers or an explicit question time; base/nuclear/changed hexagrams and body/use element relations | User-provided numbers or a separate question time; no birthday needed |
 | Tarot | 78 cards, spread positions, preserved card order and upright/reversed states | Question, spread, and chosen cards |
 | Lenormand | 36 cards, pairs, three/nine cards, and Grand Tableau; no reversals | Question, card order, and layout |
 | Xiao Liu Ren | Selected lunar month/day/hour counting, three stages and final palace | Separate question date and traditional hour |
@@ -58,7 +65,7 @@ There are **25 entry points**: 19 calculation, draw, or calendar methods, two ph
 | Section | Available content | Material needed |
 | --- | --- | --- |
 | Palm | Visible line position, direction, and continuity; optional numbered annotations generated on the original | Clear photos of the person's left/right palm |
-| Face | Visible outline and regional facial features; optional numbered annotations generated on the original | Clear photos of the person |
+| Face / Ma Yi tradition | Shared face photos, visible features, and traditional region/organ terminology; optional original-photo annotations | Clear photos of the person |
 
 Photo observations do not infer personality, health, or destiny from appearance.
 
@@ -71,7 +78,13 @@ Photo observations do not infer personality, health, or destiny from appearance.
 | Da Liu Ren | Reading existing Four Lessons/Three Transmissions; separate from Xiao Liu Ren and Jin Kou Jue | An existing chart and conventions |
 | Human Design | Traditional terminology applied to an existing chart; no automatic gate/channel engine | An existing chart and its calculation basis |
 
-See the [capability index](skills/mingxue-master/references/multi-system.md) and [25-method registry](skills/mingxue-master/references/systems.json). Tools calculate chart facts; the current agent writes interpretations and synthesis. Methods are not added together into a destiny score.
+See the [capability index](skills/mingxue-master/references/multi-system.md) and [27-method registry](skills/mingxue-master/references/systems.json). Tools calculate chart facts; the current agent writes interpretations and synthesis. Methods are not added together into a destiny score.
+
+### Classical dream-text lookup — one method
+
+Zhou Gong dream interpretation accepts a separate dream narrative per person and searches 988 original clauses in 27 chapters. Dream-only requests need no birthday or place. Unmatched scenes receive no invented quotations; dream narratives and text matches are reference material, not independent chart evidence.
+
+Ma Yi adapts the selected face terminology reference; Mei Hua references MIT-licensed body/use and trigram-element code. The dream text comes from a pinned edition explicitly marked public domain. See [upstream projects, fixed revisions, actual use, and permissions](skills/mingxue-master/references/third-party/README.md).
 
 ## Default workflow
 
@@ -159,6 +172,6 @@ Other calculation and safety tests are in `tests`. Tests that depend on external
 
 ## Versions and bundled materials
 
-The public-facing release is 1.0. The existing private plugin platform requires an increasing upgrade number, so its compatibility manifests retain an internal upgrade version. The GitHub source release uses 1.0.0 manifests; both have the same functional source.
+The public-facing release is 1.0. The existing private plugin platform requires an increasing upgrade number, so its compatibility manifests retain an internal upgrade version. The GitHub source release uses 1.0.1 manifests; both have the same functional source.
 
 Sources, summaries, and editions of bundled illustrations and reference materials remain in their original manifests. External engines retain their own versions and licenses. No single open-source license has been selected for this repository.

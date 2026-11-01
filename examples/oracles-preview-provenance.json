@@ -1,0 +1,80 @@
+{
+  "example": "Completely synthetic. No real person, birth data, location, photograph or previous case was used.",
+  "subject": "虚构演示者 B",
+  "source_request": "synthetic-oracles-request.json",
+  "files": [
+    {
+      "file": "oracles-demo.html",
+      "sha256": "f0086db8f22b54693e4a9cad3947ad7fef23667d25515ee3325871af9382fe59",
+      "bytes": 5127004
+    },
+    {
+      "file": "oracles-demo.pdf",
+      "sha256": "7ecc231165e763e550fb6bbe21478bd6cdce5348b3128e51f121626b8b801da7",
+      "bytes": 5555415
+    },
+    {
+      "file": "synthetic-oracles-request.json",
+      "sha256": "4c505f326c0ce9d30e674be286ee4dd6ffbf6b272cae3c647068c99574e11903",
+      "bytes": 900
+    }
+  ],
+  "pdf_pages": 5,
+  "methods": [
+    {
+      "system": "meihua",
+      "result_sha256": "8192962455dbf5e5dd0abb151f60de128059521f967c05d5dc9e0b6be35b939a"
+    },
+    {
+      "system": "dream",
+      "result_sha256": "faef3cae5bcc8dbdb8fbca80aa357126607b73dd61e4f372b6360396435c0c50"
+    }
+  ],
+  "coverage": [
+    {
+      "system": "meihua",
+      "kind": "ready",
+      "calculated": true
+    },
+    {
+      "system": "dream",
+      "kind": "reference",
+      "calculated": false
+    }
+  ],
+  "pipeline": [
+    "agent_report run",
+    "workflow update with current readings/result and question hashes",
+    "agent_report status",
+    "agent_report deliver with synthesis and example flag",
+    "Approved local text/vector PDF export",
+    "Poppler pdftoppm 180 DPI, complete actual PDF pages"
+  ],
+  "validation": {
+    "expected_text_blocks": 119,
+    "missing_text_blocks": [],
+    "source_narrative_blocks": 18,
+    "missing_source_narratives": [],
+    "privacy_text_scan": "passed"
+  },
+  "screenshots": [
+    {
+      "file": "../docs/screenshots/meihua.png",
+      "pdf_page": 4,
+      "width": 1489,
+      "height": 2105,
+      "sha256": "5fee9832e8af5b6e5f78ff8b8c727134fe35bdbc5b55bec8f2a6d64f9323560c"
+    },
+    {
+      "file": "../docs/screenshots/dream.png",
+      "pdf_page": 5,
+      "width": 1489,
+      "height": 2105,
+      "sha256": "b08a25d20fae11e7062d26e9564c212cab26af39ee0c75643a338ff117cc2514"
+    }
+  ],
+  "limits": [
+    "Dream is personal narrative plus classical textual reference, not independent predictive evidence.",
+    "No browser, CDP, headless browser, local HTML server or generated screenshot was used."
+  ]
+}

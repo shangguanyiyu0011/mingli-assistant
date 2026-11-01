@@ -6,9 +6,9 @@ import hashlib
 import json
 from pathlib import Path
 
-LABELS = {"bazi": "八字", "iching": "周易", "ziwei": "紫微斗数", "astrology": "西方占星",
+LABELS = {"bazi": "八字", "iching": "周易", "meihua":"梅花易数", "dream":"周公解梦", "ziwei": "紫微斗数", "astrology": "西方占星",
           "vedic": "恒星黄道基础", "names": "姓名", "numerology": "数秘", "tarot": "塔罗",
-          "electional": "黄历", "palm": "手相观察", "face": "面相观察", "fengshui": "风水资料",
+          "electional": "黄历", "palm": "手相观察", "face": "面相·麻衣相法", "fengshui": "风水资料",
           "qimen": "奇门资料", "liuren": "六壬资料", "human_design": "人类图资料"}
 LABELS.update({"xiaoliuren":"小六壬", "jinkoujue":"六壬金口诀", "qizheng":"七政四余", "taiyi":"太乙神数",
                "sukuyo":"宿曜", "yilin":"焦氏易林", "lingqijing":"灵棋经", "lenormand":"雷诺曼", "geomancy":"西方土占", "horary":"卜卦占星"})
@@ -88,13 +88,19 @@ def summarize(system, value, state):
         fact("三才", value.get("three_talents", {}).get("label"), "/three_talents/label")
         reading = "五格与三才是按声明笔画完成的数理结构；读音、字形、字义和谐音另作文字比较。"
         limits.extend(text(item) for item in value.get("pending_inputs", []))
-    elif system == "iching":
+    elif system in ("iching", "meihua"):
         fact("六爻自下而上", value.get("lines_bottom_to_top"), "/lines_bottom_to_top")
         fact("卦与变化", value.get("hexagrams"), "/hexagrams")
         fact("动爻", value.get("moving_positions"), "/moving_positions")
         if value.get("cast_context"):
             fact("起卦时间依据", value["cast_context"], "/cast_context")
         reading = "本、变、互、错、综分别用于传统符号阅读；出生时刻与起卦时刻分开保存。"
+        if system == "meihua":
+            fact("体用五行", value.get("body_use"), "/body_use")
+    elif system == "dream":
+        fact("古文条目", value.get("matches", []), "/matches")
+        fact("古文来源", value.get("source"), "/source")
+        reading = "围绕具体梦境情节、感受与命中的古文条目分别解读。"
     elif system == "numerology":
         for field in ("life_path", "personal_year", "latin_name", "method", "master_numbers"):
             if field in value:

@@ -81,7 +81,7 @@ def update_job(job_dir,patch:dict,person=None):
     if not isinstance(patch,dict) or person not in (None,"A","B"):
         raise ValueError("patch须为对象，person仅接受A、B或null。")
     _json_budget(patch)
-    if person is not None and set(patch)-{"person","birth","location","name","photos","observations"}:
+    if person is not None and set(patch)-{"person","birth","location","name","photos","observations","dream"}:
         raise ValueError("指定人物时仅能更正本人基础资料、照片引用与独立观察。")
     with project_lock(job):
         current_file=_private(job,"current-request.json")

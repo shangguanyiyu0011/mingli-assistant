@@ -29,8 +29,8 @@ def cli(*args):
 class FortuneTests(unittest.TestCase):
     def test_registry_references_and_real_vs_reference_levels(self):
         rows = fortune.registry()
-        self.assertEqual(len(rows), 25)
-        self.assertEqual(len({r["id"] for r in rows}), 25)
+        self.assertEqual(len(rows), 27)
+        self.assertEqual(len({r["id"] for r in rows}), 27)
         for row in rows:
             self.assertTrue((SKILL / row["reference"]).is_file())
             if row["script"]:

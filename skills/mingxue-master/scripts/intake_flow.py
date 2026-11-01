@@ -24,7 +24,7 @@ from project_store import contained, read_json, write_new_json
 from time_conversion import load_zone
 from fortune import registry
 
-EXTRAS = {"xiaoliuren", "jinkoujue", "qizheng", "taiyi", "sukuyo", "yilin", "lingqijing", "lenormand", "geomancy", "horary"}
+EXTRAS = {"xiaoliuren", "jinkoujue", "qizheng", "taiyi", "sukuyo", "yilin", "lingqijing", "lenormand", "geomancy", "horary", "meihua", "dream"}
 PUBLIC_FILES = {"personal-a.html", "personal-b.html", "pair.html"}
 _BRANCHES = "子丑寅卯辰巳午未申酉戌亥"
 _ROOT_KEYS = {"mode", "people", "preferences", "method_options"}
@@ -36,6 +36,8 @@ _METHOD_KEYS = {
     "names": {"stroke_scheme", "stroke_standard", "stroke_reference", "pronunciation", "meaning_note", "surname_reading", "given_reading"},
     "numerology": {"date", "year", "masters", "method", "latin_name"},
     "iching": {"lines", "method", "numbers", "direction", "najia", "seed", "question", "cast_date", "cast_time", "cast_timezone", "cast_sect", "cast_fold", "cast_time_basis", "cast_longitude", "cast_true_solar"},
+    "meihua": {"numbers", "date", "time", "timezone", "fold", "question"},
+    "dream": set(),
     "tarot": {"spread", "seed", "cards", "question", "upright_only"},
     "electional": {"date", "days", "time", "topic"},
     "palm": {"observations"}, "face": {"observations"},
@@ -217,6 +219,12 @@ def _lunar_object(value,label):
 
 def _validate_options(system,value):
     p=_obj(value,_METHOD_KEYS[system],"method_options."+system)
+    if system == "meihua":
+        from new_oracles import validate
+        try:
+            validate(system,p)
+        except ValueError as exc:
+            raise IntakeError(str(exc)) from exc
     # Every accepted scalar is checked here; no path-bearing native argument is exposed.
     for key in ("question","topic","latin_name","stroke_standard","stroke_reference","pronunciation","meaning_note","surname_reading","given_reading"):
         if key in p:
@@ -434,8 +442,8 @@ def normalize_request(request, *, allow_agent_observations=False, allow_unresolv
         raise IntakeError("single须一人，pair须两人，每人资料独立。")
     normalized=[]
     for index,raw in enumerate(people):
-        person=_obj(raw,{"person","birth","birthplace","location","name","photos","observations"},"people")
-        if not isinstance(person.get("person"),dict) or not isinstance(person.get("birth"),dict):
+        person=_obj(raw,{"person","birth","birthplace","location","name","photos","observations","dream"},"people")
+        if not isinstance(person.get("person"),dict):
             raise MissingBasics("请先填写每人的称呼、出生日期、历法和时区。")
         identity=_obj(person["person"],{"name","notes"},"person")
         if "name" not in identity:
@@ -445,39 +453,45 @@ def normalize_request(request, *, allow_agent_observations=False, allow_unresolv
             raise IntakeError("称呼不能是文件路径。")
         if "notes" in identity:
             _text(identity["notes"],"个人说明",4000)
-        birth=_obj(person["birth"],{"date","time","shichen","calendar","leap","timezone","gender"},"birth")
         birthplace=person.get("birthplace")
         if birthplace is not None:
             _text(birthplace,"出生地点",240,True)
-        if not {"date","calendar"}<=set(birth) or not birth.get("timezone") and not (allow_unresolved_places and birthplace):
-            raise MissingBasics("请填写出生日期、历法与出生地点；已有明确时区的旧资料也可使用，时辰可以未知。")
-        calendar=_choice(birth["calendar"],"历法",{"solar","lunar"})
-        y,m,d=_date_parts(birth["date"],"出生日期",calendar=="lunar")
-        if not 1583<=y<=9998:
-            raise IntakeError("出生历法支持1583至9998年；古代记录请另用明确历法资料入口。")
-        birth["time"]=_time(birth.get("time"),"出生钟点")
-        try:
-            validate_shichen(birth.get("shichen"), birth["time"])
-        except ValueError as exc:
-            raise IntakeError("出生时辰须为十二地支之一，且不能同时填写准确钟点。") from exc
-        if birth.get("timezone") not in (None,""):
-            _zone(birth["timezone"],"出生时区")
-        else:
-            birth["timezone"]=None
-        if "leap" in birth:
-            _boolean(birth["leap"],"闰月")
-        if calendar=="solar" and birth.get("leap"):
-            raise IntakeError("公历输入不能标闰月。")
-        if calendar=="lunar":
-            lib=calendar_library()
-            month=lib.LunarYear.fromYear(y).getMonth(-m if birth.get("leap",False) else m)
-            if month is None or month.getYear()!=y or d>month.getDayCount():
-                raise IntakeError("该年农历月日或闰月不存在。")
-        if birth.get("gender") in (None,""):
-            birth["gender"]=None
-        else:
-            _choice(birth["gender"],"传统排盘性别",{"male","female"})
+        birth=None
+        if person.get("birth") is not None:
+            birth=_obj(person["birth"],{"date","time","shichen","calendar","leap","timezone","gender"},"birth")
+            if not {"date","calendar"}<=set(birth) or not birth.get("timezone") and not (allow_unresolved_places and birthplace):
+                raise MissingBasics("请填写出生日期、历法与出生地点；已有明确时区的旧资料也可使用，时辰可以未知。")
+            calendar=_choice(birth["calendar"],"历法",{"solar","lunar"})
+            y,m,d=_date_parts(birth["date"],"出生日期",calendar=="lunar")
+            if not 1583<=y<=9998:
+                raise IntakeError("出生历法支持1583至9998年；古代记录请另用明确历法资料入口。")
+            birth["time"]=_time(birth.get("time"),"出生钟点")
+            try:
+                validate_shichen(birth.get("shichen"), birth["time"])
+            except ValueError as exc:
+                raise IntakeError("出生时辰须为十二地支之一，且不能同时填写准确钟点。") from exc
+            if birth.get("timezone") not in (None,""):
+                _zone(birth["timezone"],"出生时区")
+            else:
+                birth["timezone"]=None
+            if "leap" in birth:
+                _boolean(birth["leap"],"闰月")
+            if calendar=="solar" and birth.get("leap"):
+                raise IntakeError("公历输入不能标闰月。")
+            if calendar=="lunar":
+                lib=calendar_library()
+                month=lib.LunarYear.fromYear(y).getMonth(-m if birth.get("leap",False) else m)
+                if month is None or month.getYear()!=y or d>month.getDayCount():
+                    raise IntakeError("该年农历月日或闰月不存在。")
+            if birth.get("gender") in (None,""):
+                birth["gender"]=None
+            else:
+                _choice(birth["gender"],"传统排盘性别",{"male","female"})
         item={"person":identity,"birth":birth,"location":_geo(person.get("location",{}),"出生地点")}
+        if "dream" in person:
+            _text(person["dream"],"梦境描述",4000)
+            if person["dream"].strip():
+                item["dream"]=person["dream"]
         if birthplace is not None:
             item["birthplace"]=birthplace
         if "name" in person and person["name"] is not None:
@@ -523,8 +537,11 @@ def normalize_request(request, *, allow_agent_observations=False, allow_unresolv
         preferences["systems"]=[x["id"] for x in registry()]
     if preferences["systems"]!="auto":
         ids=preferences["systems"]
-        if not isinstance(ids,list) or not 1<=len(ids)<=25 or any(not isinstance(x,str) or x not in valid for x in ids) or len(set(ids))!=len(ids):
-            raise IntakeError("systems须为auto、all或最多25个不重复的体系ID。")
+        if not isinstance(ids,list) or not 1<=len(ids)<=len(valid) or any(not isinstance(x,str) or x not in valid for x in ids) or len(set(ids))!=len(ids):
+            raise IntakeError("systems须为auto、all或最多27个不重复的体系ID。")
+    independent = preferences["systems"] != "auto" and set(preferences["systems"]) <= {"meihua","dream"}
+    if any(person["birth"] is None and not person.get("dream") for person in normalized) and not independent:
+        raise MissingBasics("请填写出生资料，或选择梅花易数、填写梦境后继续独立分析。")
     for key,default,limit in (("topic","综合分析",200),("question","",4000),("relationship","伴侣",80),("depth","detailed",20)):
         preferences.setdefault(key,default)
         _text(preferences[key],key,limit,key in ("topic","relationship"))
@@ -628,15 +645,17 @@ def plan_request(request, *, allow_agent_observations=False):
     plans=[]; questions=[]; warnings=[]
     for person_index,person in enumerate(source["people"]):
         birth=copy.deepcopy(person["birth"]); geo=person["location"]
-        solar_date,lunar_birth=_calendar_dates(birth)
+        solar_date,lunar_birth=_calendar_dates(birth) if birth else (None,None)
         if pref["systems"]=="auto":
-            selected=["bazi","numerology","sukuyo"]
-            if (birth["time"] or birth.get("shichen")) and birth.get("gender"):
+            selected=["bazi","numerology","sukuyo"] if birth else []
+            if birth and (birth["time"] or birth.get("shichen")) and birth.get("gender"):
                 selected.append("ziwei")
-            if (birth["time"] or birth.get("shichen")) and geo:
+            if birth and (birth["time"] or birth.get("shichen")) and geo:
                 selected.append("astrology")
             if person.get("name"):
                 selected.append("names")
+            if person.get("dream"):
+                selected.append("dream")
             selected += [key for key,value in source["method_options"].items() if value and key not in selected]
             for system,kinds in (("palm",{"palm_left","palm_right","palm_unknown"}),("face",{"portrait"})):
                 if system not in selected and (system in person.get("observations",{}) or any(p["kind"] in kinds for p in person.get("photos",[]))):
@@ -646,7 +665,7 @@ def plan_request(request, *, allow_agent_observations=False):
         flow={"schema_version":1,"person":copy.deepcopy(person["person"]),"birth":birth,"location":copy.deepcopy(geo),
               "topic":pref["topic"],"question":pref["question"],"report_depth":pref["depth"],
               "questionnaire":copy.deepcopy(pref["answers"]),"systems":selected,"options":{},"settings":{},"deferred":{}}
-        if "language" in pref or "ui_language" in pref:
+        if "language" in pref or "ui_language" in pref or person.get("dream"):
             from reader_language import resolve_report_language
             flow["questionnaire"]["_report_language"]=resolve_report_language(source)
         if source["mode"]=="pair":
@@ -672,6 +691,9 @@ def plan_request(request, *, allow_agent_observations=False):
                               "choices":["补充资料后重新生成","暂跳过此方法"]})
         for system in selected:
             p=copy.deepcopy(source["method_options"].get(system,{}))
+            if not birth and (system in {"bazi","ziwei","astrology","vedic"} or system=="numerology" and "date" not in p or system=="sukuyo" and "birth" not in p or system=="qizheng" and not {"date","time","timezone","latitude","longitude"}<=set(p)):
+                defer(system,"本方法需要出生资料；可以先阅读其他已提供材料的分析。",["出生日期及本方法所需的时空资料"])
+                continue
             if system=="bazi":
                 settings={k:p[k] for k in ("sect","true_solar","yun_sect") if k in p}
                 if settings:
@@ -709,11 +731,11 @@ def plan_request(request, *, allow_agent_observations=False):
                     flow["name"]=_combine_explicit(flow["name"],p,"姓名")
                 continue
             elif system=="numerology":
-                p=_combine_explicit(p,{"date":solar_date},"数秘生日")
+                p=_combine_explicit(p,{"date":solar_date},"数秘生日") if birth else p
             elif system=="sukuyo":
-                p=_combine_explicit(p,{"birth":lunar_birth},"宿曜本人日期")
+                p=_combine_explicit(p,{"birth":lunar_birth},"宿曜本人日期") if birth else p
             elif system in ("qizheng","horary"):
-                if system=="qizheng":
+                if system=="qizheng" and birth:
                     derived={"date":solar_date,"timezone":birth["timezone"]}
                     if birth["time"]:
                         derived["time"]=birth["time"]
@@ -723,7 +745,7 @@ def plan_request(request, *, allow_agent_observations=False):
                         defer(system,"七政四余需要本人明确钟点和经纬度。",["出生钟点","出生经纬度"])
                     if not 1583<=int(solar_date[:4])<=2999:
                         defer(system,"现有天文引擎支持1583至2999年的实时时空。",["引擎支持范围内的日期或独立历史盘面"])
-                else:
+                elif system=="horary":
                     if cast:
                         derived={k:cast[k] for k in ("date","time","timezone","latitude","longitude") if k in cast}
                         if pref["question"].strip():
@@ -773,6 +795,20 @@ def plan_request(request, *, allow_agent_observations=False):
                 else:
                     p=_combine_explicit(p,{"date":cast["date"]},"黄历用事日期")
                     _validate_options(system,p)
+            elif system=="dream":
+                if person.get("dream"):
+                    p={"text":person["dream"]}
+                else:
+                    defer(system,"可填写本人梦境后解读。",["梦境描述"])
+            elif system=="meihua":
+                if "numbers" not in p and cast and cast.get("time"):
+                    p=_combine_explicit(p,{k:cast[k] for k in ("date","time","timezone") if cast.get(k) is not None},"梅花提问时刻")
+                if not set(p)&{"numbers","date"}:
+                    defer(system,"梅花易数需明确报数或提问时刻。",["两个或三个报数，或提问日期钟点与时区"])
+                elif "numbers" not in p:
+                    _validate_options(system,p)
+                if pref["question"].strip():
+                    p=_combine_explicit(p,{"question":pref["question"]},"梅花问题")
             elif system=="iching":
                 method=p.get("method")
                 if method is None:
@@ -829,14 +865,14 @@ def plan_request(request, *, allow_agent_observations=False):
             elif system in ("fengshui","qimen","liuren","human_design"):
                 defer(system,"这是资料阅读入口，还需真实平面或已有盘面，不由出生表自动补盘。",["真实平面/已有盘面及口径"])
             flow["options"][system]={"params":p} if system in EXTRAS else p
-        if "bazi" in selected and not geo and (flow["settings"].get("bazi",{}).get("true_solar") or birth.get("time_basis")=="true-solar-time"):
+        if birth and "bazi" in selected and not geo and (flow["settings"].get("bazi",{}).get("true_solar") or birth.get("time_basis")=="true-solar-time"):
             for system in selected:
                 if system in {"bazi","ziwei","astrology","vedic"}:
                     defer(system,"共享出生钟口径要求真太阳时但缺明确经度；保留原规则，暂不预排该共享盘。",["出生经度"])
         plans.append({"workflow_input":flow,"inline_observations":inline})
-        if birth.get("shichen"):
+        if birth and birth.get("shichen"):
             warnings.append(person["person"]["name"]+"：只知道"+birth["shichen"]+"时，保留整段候选；占星仅计算安全的太阳区间，不确定上升与宫位。")
-        elif birth["time"] is None:
+        elif birth and birth["time"] is None:
             warnings.append(person["person"]["name"]+"：时辰未知，保留实际候选，不补中午。")
     # Validate the resulting public workflow schema before the first job write.
     for plan in plans:
@@ -845,6 +881,8 @@ def plan_request(request, *, allow_agent_observations=False):
         # if a particular optional method is deferred. No engine or random draw is involved.
         flow=plan["workflow_input"]
         birth=copy.deepcopy(flow["birth"])
+        if birth is None:
+            continue
         convention=flow["settings"].get("bazi",{})
         options={**convention,**birth}
         if flow["location"]:

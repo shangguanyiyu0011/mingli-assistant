@@ -298,9 +298,9 @@ class PlanningAndActualTests(unittest.TestCase):
         with patch("workflow.run_project",side_effect=AssertionError("no workflow")),patch("iching.coin_cast",side_effect=AssertionError("no draw")),patch("classic_oracles._sample_bits",side_effect=AssertionError("no draw")),patch("symbolic.tarot",side_effect=AssertionError("no draw")):
             plan=intake_flow.plan_request(incoming)
         flow=plan["people"][0]["workflow_input"]
-        self.assertEqual(len(flow["systems"]),25)
-        self.assertEqual(len(set(flow["systems"])),25)
-        self.assertEqual(len(flow["deferred"]),22)
+        self.assertEqual(len(flow["systems"]),27)
+        self.assertEqual(len(set(flow["systems"])),27)
+        self.assertEqual(len(flow["deferred"]),24)
         self.assertFalse(plan["request"]["preferences"]["virtual_draws"])
         for system in ("iching","tarot","yilin","lingqijing","lenormand","geomancy"):
             self.assertIn(system,flow["deferred"])

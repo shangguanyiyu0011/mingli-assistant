@@ -1,0 +1,41 @@
+{
+  "retrieved_at_utc": "2026-11-01T12:09:37.067852+00:00",
+  "source_url": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E5%85%AC%E8%A7%A3%E5%A4%A2&oldid=7907671",
+  "raw_url": "https://zh.wikisource.org/w/index.php?title=%E5%91%A8%E5%85%AC%E8%A7%A3%E5%A4%A2&oldid=7907671&action=raw",
+  "revision": 7907671,
+  "source_page_modified": "2026-07-11 (as displayed by source)",
+  "source_wikitext_bytes": 24285,
+  "source_wikitext_sha256": "cf04d799682997becc0ca1a7f7cc3a30d141755b7eb2a9de4adcb04958a16300",
+  "rendered_evidence_sha256": "63f3b12a68838120e6b4437b9025e2c3fe476c85cd4affaaa7dbeca67424c379",
+  "dataset_sha256": "2b20fe66bb5c75f456f5a9f354abe8fb53933e2d8f6024a158024d9701a932f2",
+  "chapter_count": 27,
+  "entry_count": 988,
+  "all_clauses_character_count": 7,
+  "entries_with_aliases": 566,
+  "duplicate_texts_preserved": {},
+  "extraction": [
+    "Keep 27 == chapter == headings as chapter metadata.",
+    "Each whitespace-delimited 7-character source clause becomes one entry; never concatenate clauses.",
+    "Exclude Header template, opening poem, blank lines and Pd-old template from entries; retain exact raw file.",
+    "No character correction, simplified conversion, interpretation, footer or editor notes in text.",
+    "IDs use pinned-source chapter order and clause order; source_line/source_token permit exact lookup.",
+    "aliases are optional, manually mapped common nouns detected by literal substring; not semantic validation."
+  ],
+  "rights": {
+    "classical_work": "The source page explicitly marks this work as public domain (PD-old).",
+    "evidence": [
+      "source.wikitext ends with {{Pd-old}}",
+      "source.html contains rendered PD-old explanation"
+    ],
+    "site_footer": "CC BY-SA 4.0; do not conflate site/editorial contributions with the separately marked classical work.",
+    "attribution": "周公解夢 (traditional attributed text), chapter; Wikisource contributors; revision 7907671; source URL."
+  },
+  "limitations": [
+    "Electronic text only; no scanned edition or historical authorship verification.",
+    "Unusual characters and apparent transcription errors are preserved without correction.",
+    "988 clauses in this pinned revision, not the approximately 1016 claimed in tt-qimen notes.",
+    "Aliases are coarse noun lookup keys, may be empty or overinclusive; no narrative interpretation inferred.",
+    "Traditional omens are cultural source material, not medical/psychological diagnosis or factual predictions."
+  ],
+  "aliases_note": "Project-authored Chinese/English/Japanese/Korean noun lookup keys; not translations or predictions. Exact classical text preserved."
+}

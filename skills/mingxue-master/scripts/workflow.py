@@ -12,7 +12,7 @@ import sys
 
 sys.dont_write_bytecode = True
 from chart import build_chart, validate_shichen
-from fortune import ROOT, dispatch, find_system
+from fortune import ROOT, dispatch, find_system, registry
 import presets
 from project_store import (ProjectError, canonical, commit_revision, contained, digest, file_digest,
     load_project, load_revision, merge_patch, project_lock, read_json, reserve_revision, utc_now,
@@ -86,7 +86,7 @@ def normalize_input(value):
         if "_report_language" in answers and answers["_report_language"] not in ("zh-CN","en","ja","ko"):
             raise ProjectError("invalid report language")
     deferred = result.get("deferred", {})
-    if not isinstance(deferred, dict) or len(deferred) > 25:
+    if not isinstance(deferred, dict) or len(deferred) > len(registry()):
         raise ProjectError("invalid deferred systems")
     for name, entry in deferred.items():
         find_system(name)
@@ -169,7 +169,7 @@ def normalize_input(value):
     if result.get("readings") is None:
         result["readings"] = {}
     readings = result.setdefault("readings", {})
-    if not isinstance(readings, dict) or len(readings) > 25:
+    if not isinstance(readings, dict) or len(readings) > len(registry()):
         raise ProjectError("readings must be an object keyed by system ID")
     normalized_readings = {}
     for name, reading in readings.items():
@@ -215,7 +215,7 @@ def normalize_input(value):
         presets.resolve_profile(profile)
     requested = result.setdefault("systems", "auto")
     if requested != "auto":
-        if not isinstance(requested, list) or not 1 <= len(requested) <= 25:
+        if not isinstance(requested, list) or not 1 <= len(requested) <= len(registry()):
             raise ProjectError("systems must be auto or an explicit nonempty list")
         selected = [find_system(item)["id"] for item in requested]
         if len(set(selected)) != len(selected):
@@ -238,7 +238,7 @@ def select_systems(source):
             selected.append("astrology")
     if source.get("name"):
         selected.append("names")
-    for system in ("iching", "tarot", "numerology", "electional", "palm", "face"):
+    for system in ("iching", "tarot", "numerology", "electional", "palm", "face", "meihua", "dream"):
         if source["options"].get(system):
             selected.append(system)
     if not selected:
@@ -409,6 +409,9 @@ def _dependency(system, source, profile, birth, implementation, readiness):
         if options.get(field):
             options[field] = {"sha256": file_digest(options[field])}
     dependency = {"implementation": implementation, "options": options, "engine": readiness}
+    if system == "dream" and system not in source.get("deferred", {}):
+        dependency["dictionary"] = {name:file_digest(ROOT / "assets/classic-oracles" / name)
+                                    for name in ("zhougong.json", "zhougong-source.json")}
     if system in source.get("deferred", {}):
         dependency["deferred"] = source["deferred"][system]
     if system in BIRTH_SYSTEMS:

@@ -29,6 +29,7 @@ HIGHLIGHTS={
     "astrology":[("太阳星座","/sun_sign")],"vedic":[("恒星太阳星座","/sun_sign")],
     "names":[("姓名","/name")],
     "iching":[("本卦","/hexagrams/base/name"),("之卦","/hexagrams/changed/name")],
+    "meihua":[("本卦","/hexagrams/base/name"),("体用关系","/body_use/relation")],
     "yilin":[("易林卦对","/oracle/label")],"lingqijing":[("灵棋课名","/oracle/title")],
     "xiaoliuren":[("所到六宫","/final_palace/name")],
     "taiyi":[("太乙局式","/chart/bureau/文")],
@@ -59,6 +60,7 @@ RESULT_ROOTS={
     "sukuyo":{"birth_mansion","daily_mansion","daily_relation","partner_mansion","partner_relation"},
     "qizheng":{"candidates"},"horary":{"candidates"},
     "iching":{"hexagrams","moving_positions","lines_bottom_to_top","najia","reading","cast_context"},
+    "meihua":{"hexagrams","moving_positions","lines_bottom_to_top","body_use"},
     "tarot":{"cards"},"xiaoliuren":{"steps","three_positions","final_palace","visualization"},
     "jinkoujue":{"four_positions","candidates","convention_alternatives","visualization"},
     "taiyi":{"chart","nine_palaces"},"yilin":{"hexagrams","oracle","line_values_bottom_to_top","moving_positions"},
@@ -177,6 +179,8 @@ def _category(state,payload,system):
     native=payload.get("status")
     if native is not None and not isinstance(native,str):
         raise SynthesisError("方法原生状态须为文字或未提供。")
+    if system=="dream" and state in ("ready","partial"):
+        return "reference",False
     if state in REFERENCE:
         return "reference",False
     if state in OBSERVATION:
@@ -232,7 +236,7 @@ def _extract(records,scope,comparison):
         subject={"person":role,"name":name,"birth":copy.deepcopy(birth),"location":copy.deepcopy(location),"question_hash":question_hash}
         subjects.append(subject)
         panels=report.get("panels")
-        if not isinstance(panels,list) or not 1<=len(panels)<=25:
+        if not isinstance(panels,list) or not 1<=len(panels)<=len(known):
             raise SynthesisError("综合需要实际所选方法面板。")
         seen=set(); methods=[]
         for panel in panels:

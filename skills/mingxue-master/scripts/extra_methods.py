@@ -1,4 +1,4 @@
-"""One JSON adapter for ten additional, separately identified methods."""
+"""One JSON adapter for additional, separately identified methods."""
 import argparse
 import importlib
 import json
