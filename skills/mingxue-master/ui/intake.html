@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>综合命理 · 填写资料</title>
+  <link rel="stylesheet" href="intake.css">
+  <link rel="stylesheet" href="intake-draws.css">
+  <script id="intake-locales" type="application/json">{}</script>
+  <script defer src="i18n.js"></script>
+  <script defer src="art-assets.js"></script>
+  <script defer src="intake-draws.js"></script>
+  <script defer src="intake.js"></script>
+</head>
+<body>
+<main class="shell">
+  <div class="language-toolbar"><label for="ui-language">语言 / Language</label><select id="ui-language" data-i18n-ignore><option value="zh-CN">中文</option><option value="en">English</option><option value="ja">日本語</option><option value="ko">한국어</option></select></div>
+  <div class="heading"><div>
+    <h1>先填你知道的资料</h1>
+    <p>填好你知道的资料，再按需添加照片。出生时间不确定也可以继续；补充内容都可跳过。</p>
+  </div></div>
+  <div class="layout">
+  <form id="intake" novalidate>
+    <section class="section">
+      <div class="section-head"><h2>这次为谁填写？</h2></div>
+      <fieldset class="mode-select people-select">
+        <legend class="sr-only">填写人数</legend>
+        <label class="mode"><input type="radio" name="mode" value="single" checked><span><b>一个人</b><small>一份个人报告</small></span></label>
+        <label class="mode"><input type="radio" name="mode" value="pair"><span><b>两个人</b><small>各自的报告，再加一份关系分析</small></span></label>
+      </fieldset>
+      <p class="hint">切换人数会保留已填资料、照片和亲手抽取的结果；提交时只包含当前选择的人。</p>
+      <label id="relationship-field" hidden>你们是什么关系？<select id="relationship"><option value="">请选择</option><option value="partner">伴侣</option><option value="friend">朋友</option><option value="family">家人</option><option value="collaboration">合作伙伴</option><option value="other">其他</option></select></label>
+    </section>
+    <div id="people"></div>
+    <section class="section">
+      <div class="section-head"><h2>想了解什么？<span class="heading-hint">选填</span></h2></div>
+      <p class="hint" id="question-preset-help">可以从常见问题开始。点一下会加入完整问题，已有内容会保留，也可以继续改成自己的话。</p>
+      <div class="question-presets" id="question-presets" role="group" aria-label="常见问题" aria-describedby="question-preset-help">
+        <button type="button" data-question-preset="overview" aria-controls="question">综合了解</button>
+        <button type="button" data-question-preset="personality" aria-controls="question">个人特点</button>
+        <button type="button" data-question-preset="career" aria-controls="question">职业方向</button>
+        <button type="button" data-question-preset="job-change" aria-controls="question">换工作</button>
+        <button type="button" data-question-preset="promotion" aria-controls="question">晋升发展</button>
+        <button type="button" data-question-preset="finances" aria-controls="question">财务收支</button>
+        <button type="button" data-question-preset="income" aria-controls="question">收入回报</button>
+        <button type="button" data-question-preset="dating" aria-controls="question">单身感情</button>
+        <button type="button" data-question-preset="relationship" aria-controls="question">恋爱相处</button>
+        <button type="button" data-question-preset="marriage" aria-controls="question">婚恋规划</button>
+        <button type="button" data-question-preset="family" aria-controls="question">家庭沟通</button>
+        <button type="button" data-question-preset="parenting" aria-controls="question">亲子相处</button>
+        <button type="button" data-question-preset="cooperation" aria-controls="question">合作伙伴</button>
+        <button type="button" data-question-preset="learning" aria-controls="question">学习深造</button>
+        <button type="button" data-question-preset="moving" aria-controls="question">居住搬迁</button>
+        <button type="button" data-question-preset="priorities" aria-controls="question">近期重点</button>
+      </div>
+      <p id="question-preset-feedback" class="hint" role="status" aria-live="polite"></p>
+      <label>最想聊的事情<textarea id="question" rows="3" maxlength="2000" placeholder="例如：最近在考虑换工作，想了解自己的特点，以及做选择时可以留意什么。不写也可以做综合分析。"></textarea></label>
+      <div id="question-place" hidden>
+        <label>这次提问时，你在哪里？<input id="cast-place" maxlength="200" placeholder="例如：杭州市西湖区，浙江省；国外请写国家和城市"></label>
+        <label class="check"><input id="cast-same-birthplace" type="checkbox">我现在就在第一人的出生地，不用再填一次</label>
+        <p class="hint">这里记录提问的地点，和出生地可以不同。时间会在提交时自动记录，不需要你计算。</p>
+        <details class="details">
+          <summary>想填写另一个提问时间？<span>选填</span></summary>
+          <label>这次问题的时间<select id="cast-when"><option value="now">现在提问，自动记录</option><option value="past">使用另一个明确的时间</option></select></label>
+          <label id="cast-past-field" hidden>当时的当地日期和时间<input type="datetime-local" id="cast-datetime"><span class="hint">只填写你确定的时间；时区会根据提问地点查询。</span></label>
+        </details>
+      </div>
+      <details class="details extra-context">
+        <summary>补充事情背景或其他说明<span>选填</span></summary>
+        <label>事情现在是什么情况？<span class="hint">选填</span><textarea id="answer-background" rows="3" maxlength="2000" placeholder="用日常的话描述即可。例如：目前在做什么、正面临哪些选择，或两个人是怎么相处的。"></textarea></label>
+        <label>还有想补充或不确定的地方吗？<span class="hint">选填</span><textarea id="answer-uncertainty" rows="2" maxlength="2000" placeholder="例如：生日是家人回忆的，或有些情况不想写进报告。不用按每种分析方法重复填写。"></textarea></label>
+        <details class="details">
+          <summary>想自己选择分析内容？<span>不了解就保持默认</span></summary>
+          <fieldset class="systems">
+            <legend class="sr-only">分析内容</legend>
+            <p class="hint">默认根据你提供的资料综合分析。无法确认的内容会保留为未知，缺少材料的项目不出现在报告里。</p>
+            <div class="switch">
+              <label><input type="radio" name="systems-mode" value="all" checked> 综合分析</label>
+              <label><input type="radio" name="systems-mode" value="auto"> 常用组合</label>
+              <label><input type="radio" name="systems-mode" value="custom"> 我自己选</label>
+            </div>
+            <div id="system-list" hidden aria-live="polite"></div>
+          </fieldset>
+        </details>
+      </details>
+      <details class="details draw-options" id="draw-options">
+        <summary>想亲自抽牌或摇卦？<span>可跳过</span></summary>
+        <p class="hint">先在上面写下问题，再选择一种方式。抽到的结果会保存，不会由 AI 重新抽取；两个人共用时，问的是你们共同的问题。</p>
+        <div id="intake-draws"></div>
+        <label class="check"><input id="virtual-draws" type="checkbox">也允许 AI 为没有亲手抽取的项目做软件抽取</label>
+      </details>
+    </section>
+    <div class="submit-area">
+      <button id="submit" class="primary" type="submit">提交资料 <span aria-hidden="true">→</span></button>
+      <button id="cancel" class="secondary" type="button" hidden>取消本次填写</button>
+      <p id="feedback" class="feedback" role="alert"></p>
+      <p class="hint" id="wait-note">资料只填写一次；下一步由 AI 查算、阅读照片并整理报告。</p>
+    </div>
+  </form>
+  <aside class="guide">
+    <h2>你提供资料，<br>查算交给我们。</h2>
+    <p>地点只写城市或区县，坐标和时区自动查询；姓名只填一次，笔画自动查找。</p>
+    <div class="guide-line"></div>
+    <ol><li>填写姓名或称呼、生日和出生地</li><li>按需添加手掌、面部照片</li><li>写下想了解的事，也可以留空</li><li id="guide-last">提交后回到对话继续</li></ol>
+    <p class="guide-foot">不知道出生时间可以留空。照片默认不放入报告，只有你勾选后才保留。传统文化内容用于阅读与反思。</p>
+  </aside>
+  </div>
+  <section id="results" class="section results" hidden aria-live="polite">
+    <small id="result-kicker">资料已提交</small><h2 id="result-title">资料已提交</h2>
+    <p id="result-description">请回到对话继续。</p><div id="result-list"></div><div id="warnings"></div>
+  </section>
+</main>
+</body></html>

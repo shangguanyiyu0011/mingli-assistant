@@ -1,0 +1,15 @@
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.png binary
+*.jpg binary
+*.svg text eol=lf
+*.zip.part* binary
+# Classical tables have fixed byte-level SHA-256 checksums.
+skills/mingxue-master/assets/classic-oracles/*.json -text

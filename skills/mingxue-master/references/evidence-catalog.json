@@ -1,0 +1,1030 @@
+{
+  "schema_version": 1,
+  "modules": [
+    {
+      "module_id": "01",
+      "module_name": "命理圆桌",
+      "path": "references/upstream/mingli-yuanzhuo-skillpack/mingli-yuanzhuo/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "02",
+      "module_name": "子平纳音体用法",
+      "path": "references/upstream/ziping-nayin-tiyong-skillpack/技能包/子平纳音体用法/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-cai-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-qisha-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-shangguan-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-shishang-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-yangren-jianlu-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-yin-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "03",
+      "module_name": "子平真诠",
+      "path": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-zhengguan-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-cai-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-naying/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-nvming/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-qisha-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-rishi/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-shensha/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-tongyong/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-waige/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-yinshi-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "04",
+      "module_name": "三命通会",
+      "path": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-zhengguan-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-cai-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-dayun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-jianlu-yueren-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-jibing/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-nayin/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-nvming-shensha/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-qisha-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-shishang-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-waige/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-xingqing/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-yin-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "05",
+      "module_name": "渊海子平",
+      "path": "references/upstream/yaunhai-shiping/yaunhai-zhengguan-ge/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK01_元规则·病药八法.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK02_正官格.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK03_偏官格（七杀格）.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK04_财格.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK05_印绶格.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK06_伤官食神格.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK07_阳刃比劫格.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK08_外格正说.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK09_谬说辨析·外格与神煞.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "06",
+      "module_name": "神峰通考",
+      "path": "references/upstream/shenfeng-tongkao/SK10_断事六亲.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "07",
+      "module_name": "滴天髓阐微",
+      "path": "references/upstream/ditiansui-skillpack/技能包/ditiansui-guansha-shangguan-lun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "07",
+      "module_name": "滴天髓阐微",
+      "path": "references/upstream/ditiansui-skillpack/技能包/ditiansui-hanluan-zaoshi-lun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "07",
+      "module_name": "滴天髓阐微",
+      "path": "references/upstream/ditiansui-skillpack/技能包/ditiansui-liuqin-lun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "07",
+      "module_name": "滴天髓阐微",
+      "path": "references/upstream/ditiansui-skillpack/技能包/ditiansui-shuaiwang-lun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "07",
+      "module_name": "滴天髓阐微",
+      "path": "references/upstream/ditiansui-skillpack/技能包/ditiansui-tiyong-lun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "07",
+      "module_name": "滴天髓阐微",
+      "path": "references/upstream/ditiansui-skillpack/技能包/ditiansui-yuanliu-tongguan-lun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-cai/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-qisha/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-shangguan/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-shishang/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-tiyao/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-waige/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-yin/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-zhengguan/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "08",
+      "module_name": "韦千里",
+      "path": "references/upstream/weili-qianli-bazi-skillpack/技能包/weili-zonggang/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "09",
+      "module_name": "命理约言",
+      "path": "references/upstream/mingli-yueyan-skillpack/yueyan-biange/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "09",
+      "module_name": "命理约言",
+      "path": "references/upstream/mingli-yueyan-skillpack/yueyan-duanshi/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "09",
+      "module_name": "命理约言",
+      "path": "references/upstream/mingli-yueyan-skillpack/yueyan-kanning/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "09",
+      "module_name": "命理约言",
+      "path": "references/upstream/mingli-yueyan-skillpack/yueyan-shishen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "09",
+      "module_name": "命理约言",
+      "path": "references/upstream/mingli-yueyan-skillpack/yueyan-xingqing-nvming/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-dayun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-ganshen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-jiankang/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-jishen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-mingli/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-nayin/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-sanyuan/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "10",
+      "module_name": "五行精纪",
+      "path": "references/upstream/wuxing-jingji-zhushi/wuxing-xiongshen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "11",
+      "module_name": "铁板神数",
+      "path": "references/upstream/tieban-shenshu-skillpack/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "12",
+      "module_name": "命理MBTI",
+      "path": "references/upstream/bazi-mbti-skillpack/技能包/bazi-mbti/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "13",
+      "module_name": "人格定位",
+      "path": "references/upstream/mingli-renge-dingwei-bazi-skillpack/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "14",
+      "module_name": "命运悬崖",
+      "path": "references/upstream/mingyun-xuanya-skillpack/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-dayun/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-ganshen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-jiankang/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-jishen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-mingli/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-nayin/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-sanyuan/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "15",
+      "module_name": "同人命典",
+      "path": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-xiongshen/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "16",
+      "module_name": "命学真典",
+      "path": "references/upstream/mingxue-zhendian/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    },
+    {
+      "module_id": "17",
+      "module_name": "搜书",
+      "path": "references/upstream/book-search/MODULE.md",
+      "evidence_type": "traditional_rules_or_local_reference",
+      "validation": "不代表科学预测验证"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "cases",
+      "records": 2032,
+      "status": "历史命例未逐条复核；质量标签不可解释为个人概率"
+    },
+    {
+      "id": "tieban_texts",
+      "records": 12000,
+      "status": "条文文本计数与编号可由本地工具复核，不证明预测能力"
+    }
+  ],
+  "unverified_claims": [
+    {
+      "id": "legacy_training_statistics",
+      "status": "未附完整数据、标签与验证代码，不参与个人报告"
+    }
+  ],
+  "reference_gaps": [
+    {
+      "document": "references/upstream/mingli-yuanzhuo-skillpack/mingli-yuanzhuo/命例库/命例库骨架.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/mingli-yueyan-skillpack/yueyan-biange/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/mingli-yueyan-skillpack/yueyan-duanshi/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/mingli-yueyan-skillpack/yueyan-kanning/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/mingli-yueyan-skillpack/yueyan-shishen/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/mingli-yueyan-skillpack/yueyan-xingqing-nvming/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-cai-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-naying/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-nvming/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-qisha-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-rishi/MODULE.md",
+      "missing_files": [
+        "候选/命例.md",
+        "技能包_input/sanming-rishi/命例.txt"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-shensha/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-tongyong/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-waige/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-yinshi-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/sanmingtonghui-bazi-skillpack/技能包/sanming-zhengguan-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-dayun/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_086-095.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-ganshen/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_001-010.md",
+        "候选/parts/误区_001-010.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-jiankang/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_086-095.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-jishen/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_051-060.md",
+        "候选/parts/规则_061-070.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-mingli/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_076-085.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-nayin/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_001-010.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-sanyuan/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_001-010.md",
+        "候选/parts/规则_021-030.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/tongren-mingdian-skillpack/wuxing/wuxing-xiongshen/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_086-095.md",
+        "候选/parts/误区_001-010.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-dayun/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_086-095.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-ganshen/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_001-010.md",
+        "候选/parts/误区_001-010.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-jiankang/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_086-095.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-jishen/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_051-060.md",
+        "候选/parts/规则_061-070.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-mingli/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_076-085.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-nayin/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_001-010.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-sanyuan/MODULE.md",
+      "missing_files": [
+        "候选/parts/命例_001-010.md",
+        "候选/parts/规则_021-030.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/wuxing-jingji-zhushi/wuxing-xiongshen/MODULE.md",
+      "missing_files": [
+        "候选/parts/规则_086-095.md",
+        "候选/parts/误区_001-010.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-cai-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-jianlu-yueren-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-nvming-shensha/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-qisha-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-waige/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-yin-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/yaunhai-shiping/yaunhai-zhengguan-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-nayin-tiyong-skillpack/技能包/子平纳音体用法/references/子平法_旺衰十神格局用神.md",
+      "missing_files": [
+        "references/纳音神煞辅助.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-nayin-tiyong-skillpack/技能包/子平纳音体用法/references/纳音神煞辅助.md",
+      "missing_files": [
+        "纳音论命技能包/references/三元九命性情六亲.md",
+        "纳音论命技能包/references/三元九限行运.md",
+        "纳音论命技能包/references/六十甲子纳音与贵人.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-cai-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-qisha-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-shangguan-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-shishang-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md",
+        "候选/术语.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-yangren-jianlu-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-yin-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    },
+    {
+      "document": "references/upstream/ziping-zhenquan-bazi-skillpack/技能包/zpsz-zhengguan-ge/MODULE.md",
+      "missing_files": [
+        "候选/命例.md"
+      ],
+      "status": "原文未核验，不作为独立证据"
+    }
+  ],
+  "core_text_checks": {
+    "index": "references/classics/index.json",
+    "guide": "references/classics/README.md",
+    "cards": 16,
+    "scope": "核对选定原文及对应语境，不等于全篇核验或恢复缺失提炼稿",
+    "module_mapping": [
+      {
+        "module_id": "03",
+        "card_ids": [
+          "CL-ZP-001",
+          "CL-ZP-002",
+          "CL-ZP-003",
+          "CL-ZP-004",
+          "CL-ZP-005",
+          "CL-ZP-006"
+        ],
+        "scope": "6条选定规则的原文核对，不为原模块全篇背书"
+      },
+      {
+        "module_id": "06",
+        "card_ids": [
+          "CL-SF-001",
+          "CL-SF-002",
+          "CL-SF-003"
+        ],
+        "scope": "3条选定规则的电子录文核对，底本未校"
+      },
+      {
+        "module_id": "07",
+        "card_ids": [
+          "CL-DT-001",
+          "CL-DT-002",
+          "CL-DT-003",
+          "CL-DT-004",
+          "CL-DT-005",
+          "CL-DT-006",
+          "CL-DT-007"
+        ],
+        "scope": "7条《滴天髓辑要》规则；不是《阐微》全篇核验"
+      }
+    ]
+  },
+  "case_quality": {
+    "resource_index": "references/case-quality.json",
+    "source_sha256": "cab14e21a7bbdc7e1da7a03a46eb2294dd46662300218e9cb8e33feeaa273ab5",
+    "summary": {
+      "records": 2032,
+      "flag_counts": {
+        "conflicting_variant_pillars": 1,
+        "incomplete_pillars": 289,
+        "legacy_fingerprint_collision": 43,
+        "missing_hour": 289,
+        "uncertain_hour": 222
+      },
+      "exact_duplicate_groups": 0,
+      "exact_duplicate_excess_records": 0,
+      "same_name_different_pillar_groups": 0,
+      "legacy_fingerprint_collision_groups": 1,
+      "issues": 0
+    },
+    "semantics": {
+      "duplicate": "all content fields equal except ids, source lists and editorial audit metadata; requires narrative",
+      "identity": "explicit normalized name only; aliases and unnamed same-pillar records are not identities",
+      "verification": "structural/text quality only; no birth data or prediction was verified",
+      "missing_hour": "structured hour pillar is null; a birth_text may still contain an unconverted time",
+      "action": "retain every source record; group membership never proves truth or falsity"
+    },
+    "status": "结构与文本质量审计；保留原记录，历史生辰仍未核验"
+  }
+}

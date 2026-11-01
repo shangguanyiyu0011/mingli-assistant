@@ -1,0 +1,37 @@
+{
+  "interface": {
+    "capabilities": [],
+    "category": "Entertainment",
+    "composerIcon": "./assets/icon.svg",
+    "defaultPrompt": [
+      "根据我的资料和问题，生成有依据的综合命理报告。",
+      "比较这些候选名字的字形、读音、笔画口径和五格三才。",
+      "更正我的出生资料，更新相关排盘并保留旧报告。"
+    ],
+    "developerName": "上官一羽",
+    "displayName": "综合命理 1.0",
+    "logo": "./assets/icon.svg",
+    "longDescription": "综合命理1.0。新任务先发送独立填写页，支持中、英、日、韩，回传资料后由Agent实际计算并详细解读，报告跟随资料语言。16组问题预设及每主题10道选填近况题；出生时间可填准确钟点、时辰或不知道。综合分别讲个人特点、事业、财运、爱情、家庭和近期重点，针对性问题只讲所问方面。支持25类方法及适用文字的姓名分析，缺条件的方法跳过。面相和手相可由内置图片模型以实际原照生成线条编号辅助图。默认提供离线HTML和实际PDF；双人另有合参报告，更正保留旧版。",
+    "shortDescription": "25类命理综合分析与个人、双人图文报告"
+  },
+  "name": "mingli-assistant",
+  "version": "1.0.0",
+  "description": "中英日韩填写、互动抽取与有依据的白话命理报告，支持个人及双人HTML和PDF。",
+  "author": {
+    "email": "shangguanyiyu0011@gmail.com",
+    "name": "上官一羽"
+  },
+  "keywords": [
+    "命理",
+    "周易",
+    "紫微",
+    "占星",
+    "姓名",
+    "传统文化",
+    "Agent",
+    "可视化",
+    "HTML",
+    "双人合参"
+  ],
+  "skills": "./skills"
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "description": "独立核对记录，仅保存已核短引句；不是缺失原始提炼稿的替代物。",
+  "checks": [
+    {
+      "evidence_id": "CL-ZP-001",
+      "source_id": "SRC-ZP-01",
+      "location": "原页十七，篇首第1段（PDF第26页）",
+      "checked_literals": [
+        "專求月令"
+      ],
+      "quote_sha256": "f8953e232a42aaa484259b5697e273d7ba11d00cc92e053f6062fee7cd4da31a",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-ZP-002",
+      "source_id": "SRC-ZP-01",
+      "location": "原页十七，篇首第1段顺逆用说明（PDF第26页）",
+      "checked_literals": [
+        "而逆用之"
+      ],
+      "quote_sha256": "2d29b3d54f05e3ae69beb74a400585ccac8bf55188e1de94378f86d2d3dd72d1",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-ZP-003",
+      "source_id": "SRC-ZP-01",
+      "location": "原页十九至二十一，篇首及救应段（PDF第28—30页）",
+      "checked_literals": [
+        "有成敗"
+      ],
+      "quote_sha256": "eb0d90430df676c1456e6a4a86635e64810d5fcce324f583aace5f82d55cc537",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-ZP-004",
+      "source_id": "SRC-ZP-01",
+      "location": "原页二十二，篇首第1段（PDF第31页）",
+      "checked_literals": [
+        "用神遂有變化"
+      ],
+      "quote_sha256": "450be99a7172b2950a9bf7f3a777a8bc4dba6ba1ff0e38b983484f4c80729a30",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-ZP-005",
+      "source_id": "SRC-ZP-01",
+      "location": "原页二十八至三十，篇首及金水伤官例（PDF第37—39页）",
+      "checked_literals": [
+        "須配氣候"
+      ],
+      "quote_sha256": "83322dcd8780f9b83739cb93b18ccf4cae36963dd30b7c0ef660f1dceb8239ff",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-ZP-006",
+      "source_id": "SRC-ZP-01",
+      "location": "原页三十，篇首第1段（PDF第39页）",
+      "checked_literals": [
+        "相神"
+      ],
+      "quote_sha256": "a580b871d452b98015c1f73904d924c94ca117e9f297b4933ae9b193a22b006c",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-001",
+      "source_id": "SRC-DT-12",
+      "location": "本篇正文后随文注第1段，旺衰反例句",
+      "checked_literals": [
+        "旺中有衰"
+      ],
+      "quote_sha256": "3a295be15426fb2bf41166df61f477e5eecd5e5782a8c86d7f81c5e81c731591",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-002",
+      "source_id": "SRC-DT-10",
+      "location": "本篇篇首正文第1句",
+      "checked_literals": [
+        "扶之抑之"
+      ],
+      "quote_sha256": "10cafd0463a4d92637d017e3cc29ef55dde5e9cf7c7f798af5820f73a3c300dc",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-003",
+      "source_id": "SRC-DT-16",
+      "location": "本篇第1条正文及随文注",
+      "checked_literals": [
+        "寒暖"
+      ],
+      "quote_sha256": "b2b847bfec29f0dbd8269e6901f0a2f4a7c40c6bb6a4e7e80593b6f8eca1c268",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-004",
+      "source_id": "SRC-DT-16",
+      "location": "本篇第2条正文及随文注",
+      "checked_literals": [
+        "燥濕"
+      ],
+      "quote_sha256": "e56bc372598a39fb01e876ebbe9234db4228e8deebf6855ae1683fd78a1b35e1",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-005",
+      "source_id": "SRC-DT-19",
+      "location": "本篇正文后随文注第1段，首个命例之前",
+      "checked_literals": [
+        "所喜之神"
+      ],
+      "quote_sha256": "59e0e6e952eb48195f0ecab0070831365e84dc0ee2829348735787d16d1fbca5",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-006",
+      "source_id": "SRC-DT-20",
+      "location": "本篇正文后随文注第1段，通关条件说明",
+      "checked_literals": [
+        "去其間阻"
+      ],
+      "quote_sha256": "b7d4c12d5d2f026dee0361ecaa4108927a28baed5bdfe511c7762402b6c3817c",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-DT-007",
+      "source_id": "SRC-DT-17",
+      "location": "本篇篇首正文，宅向之喻",
+      "checked_literals": [
+        "人元用事"
+      ],
+      "quote_sha256": "8a9a64c973ddf17a971192461e49452ba98fbb30cc7be12eb4045c3cb188600f",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-SF-001",
+      "source_id": "SRC-SF-01",
+      "location": "本节首段，病与药的定义句",
+      "checked_literals": [
+        "原八字中原所害之神也"
+      ],
+      "quote_sha256": "54867f861c763cfa846add19bd5070d626563005087ae49ed9fd99fb2a7fb0aa",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-SF-002",
+      "source_id": "SRC-SF-01",
+      "location": "本节中段，日干、月令、各火一处看之后",
+      "checked_literals": [
+        "从重者论"
+      ],
+      "quote_sha256": "fbdbc48930f6e9841a1a7d8bc71e56907d6c05959e805e75ed5177bdec1064d0",
+      "access_date": "2026-10-31"
+    },
+    {
+      "evidence_id": "CL-SF-003",
+      "source_id": "SRC-SF-01",
+      "location": "本节前两段，损与益定义句",
+      "checked_literals": [
+        "损其有余",
+        "益其不及"
+      ],
+      "quote_sha256": "bd5844886f2b01320bb982ff6dc7c11b6d43af9818ed72453a7ed7528b93035c",
+      "access_date": "2026-10-31"
+    }
+  ]
+}

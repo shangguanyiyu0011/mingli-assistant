@@ -1,0 +1,23 @@
+{
+  "mode": "single",
+  "people": [{
+    "person": {"name": "演示人物 A（虚构）", "notes": "完全合成演示：称呼、出生资料、问题与手工牌序均为软件展示而设定，不对应任何真人，不复用既往个案。"},
+    "birth": {"date": "2000-02-14", "time": "09:30:00", "calendar": "solar", "timezone": "Asia/Shanghai", "gender": "female"},
+    "location": {"latitude": 39.9042, "longitude": 116.4074}
+  }],
+  "preferences": {
+    "systems": ["bazi", "ziwei", "astrology", "tarot", "lenormand", "geomancy"],
+    "topic": "综合分析（完全合成演示）",
+    "question": "完全合成演示：以虚构资料展示个人特点、事业与发展、财务与财运、爱情与关系、家庭与居住，以及近期重点的文化阅读。未提供职业、收入、伴侣或家庭经历，不将假设情境写成已经发生的事实。",
+    "depth": "detailed",
+    "virtual_draws": false,
+    "prepare_engines": false,
+    "cast": {"date": "2026-10-20", "time": "14:00:00", "timezone": "Asia/Shanghai", "latitude": 39.9042, "longitude": 116.4074}
+  },
+  "method_options": {
+    "ziwei": {"scope": "yearly", "target_date": "2026-10-20", "target_time": "14:00:00"},
+    "tarot": {"spread": "three", "cards": "major-19:upright,pentacles-02:reversed,major-14:upright"},
+    "lenormand": {"spread": "three", "cards": [1, 9, 24]},
+    "geomancy": {"mothers": ["1111", "2222", "1212", "2121"], "shield_size": 16, "house_mode": "sequential"}
+  }
+}

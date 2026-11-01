@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "id": "baseline",
+      "label": "基础规则组合",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "normal",
+          "day_divide": "forward",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "P"
+        }
+      },
+      "limits": [
+        "基准使用八字00:00日界、紫微通用安星/农历年界/晚子次日/半月调闰、回归黄道Placidus。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "bazi-23h",
+      "label": "八字23:00日界",
+      "settings": {
+        "bazi": {
+          "sect": 1,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "normal",
+          "day_divide": "forward",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "P"
+        }
+      },
+      "limits": [
+        "仅改八字sect=1，23:00换日；不改变紫微晚子规则。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "late-zi-current",
+      "label": "紫微晚子按当日",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "normal",
+          "day_divide": "current",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "P"
+        }
+      },
+      "limits": [
+        "仅改紫微day_divide=current；八字仍为00:00日界。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "ziwei-zhongzhou",
+      "label": "紫微引擎中州安星选项",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "zhongzhou",
+          "year_divide": "normal",
+          "day_divide": "forward",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "P"
+        }
+      },
+      "limits": [
+        "仅使用引擎zhongzhou安星选项，非全部中州派实践，不拼入其他四化表。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "ziwei-lichun",
+      "label": "紫微引擎立春年界",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "exact",
+          "day_divide": "forward",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "P"
+        }
+      },
+      "limits": [
+        "仅改紫微year_divide=exact，以引擎立春边界处理，不改变八字年界。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "ziwei-leap-unchanged",
+      "label": "紫微闰月不按半月调整",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "normal",
+          "day_divide": "forward",
+          "fix_leap": false
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "P"
+        }
+      },
+      "limits": [
+        "仅改紫微fix_leap=false；不是所有闰月流派的完整实现。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "astrology-whole-sign",
+      "label": "占星整宫制",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "normal",
+          "day_divide": "forward",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "tropical",
+          "house_system": "W"
+        }
+      },
+      "limits": [
+        "仅改占星宫制为Whole sign；无有效时间/坐标时不能产生宫位。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    },
+    {
+      "id": "astrology-lahiri",
+      "label": "占星Lahiri恒星黄道",
+      "settings": {
+        "bazi": {
+          "sect": 2,
+          "true_solar": false
+        },
+        "ziwei": {
+          "algorithm": "default",
+          "year_divide": "normal",
+          "day_divide": "forward",
+          "fix_leap": true
+        },
+        "astrology": {
+          "zodiac": "sidereal",
+          "house_system": "P",
+          "ayanamsa": "lahiri"
+        }
+      },
+      "limits": [
+        "使用真实Lahiri恒星黄经基础；不等于完整吠陀断命、大运或分盘。",
+        "只是已实现计算参数的明确组合，不代表该名称涉及的全部门派理论。",
+        "预设不补出生事实、坐标或未知时辰；缺少所需输入时仍须停止相应计算。",
+        "不同规则的结果差异不代表预测准确率，不投票或评分。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 256 256">
+<rect width="256" height="256" rx="52" fill="#23467B"/>
+<circle cx="128" cy="128" r="66" fill="#ECDDCE"/>
+<path d="M128 62a66 66 0 0 1 0 132a33 33 0 0 0 0-66a33 33 0 0 1 0-66z" fill="#23467B"/>
+<circle cx="128" cy="95" r="9" fill="#23467B"/>
+<circle cx="128" cy="161" r="9" fill="#ECDDCE"/>
+<g transform="rotate(0 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h26"/>
+<path d="M115 31h26"/>
+<path d="M115 40h26"/>
+</g>
+<g transform="rotate(45 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h9m8 0h9"/>
+<path d="M115 31h26"/>
+<path d="M115 40h26"/>
+</g>
+<g transform="rotate(90 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h26"/>
+<path d="M115 31h9m8 0h9"/>
+<path d="M115 40h26"/>
+</g>
+<g transform="rotate(135 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h9m8 0h9"/>
+<path d="M115 31h9m8 0h9"/>
+<path d="M115 40h26"/>
+</g>
+<g transform="rotate(180 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h26"/>
+<path d="M115 31h26"/>
+<path d="M115 40h9m8 0h9"/>
+</g>
+<g transform="rotate(225 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h9m8 0h9"/>
+<path d="M115 31h26"/>
+<path d="M115 40h9m8 0h9"/>
+</g>
+<g transform="rotate(270 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h26"/>
+<path d="M115 31h9m8 0h9"/>
+<path d="M115 40h9m8 0h9"/>
+</g>
+<g transform="rotate(315 128 128)" stroke="#C39A52" stroke-width="4" stroke-linecap="round">
+<path d="M115 22h9m8 0h9"/>
+<path d="M115 31h9m8 0h9"/>
+<path d="M115 40h9m8 0h9"/>
+</g>
+</svg>

@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "levels": {
+    "calculation": "实际计算结构，不验证现实预测",
+    "external_engine": "真实外部隔离引擎，首用须准备",
+    "sidereal_structure": "恒星黄道/月宿几何结构，非完整流派断法",
+    "symbolic_sampling": "真实执行的虚拟抽样与符号",
+    "calendar_table_only": "传统表项检索，非个性化吉日引擎",
+    "visual_guidance": "图像输入检查与可见特征/一般术语，不自动断人",
+    "reference_only": "参考资料和已有盘面阅读，无自动排盘"
+  },
+  "systems": [
+    {
+      "id": "bazi",
+      "name": "八字与原有17组资料",
+      "aliases": [
+        "八字",
+        "四柱"
+      ],
+      "level": "calculation",
+      "reference": "references/modules.md",
+      "inputs": [
+        "出生日期/历法",
+        "所需钟点与时区；未知保留候选"
+      ],
+      "script": "chart.py",
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "iching",
+      "name": "周易、六爻结构与梅花",
+      "aliases": [
+        "周易",
+        "易经",
+        "六爻",
+        "梅花"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/iching.md",
+      "inputs": [
+        "实际六爻/三钱虚拟抽样/数字起卦方法"
+      ],
+      "script": "iching.py",
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "ziwei",
+      "name": "紫微斗数",
+      "aliases": [
+        "紫微",
+        "紫微斗数"
+      ],
+      "level": "external_engine",
+      "reference": "references/systems/ziwei.md",
+      "inputs": [
+        "确定生日与时辰或共享schema3",
+        "性别仅在所用规则必要时"
+      ],
+      "script": "ziwei.py",
+      "prepare": "prepare_ziwei.py",
+      "prefix": []
+    },
+    {
+      "id": "astrology",
+      "name": "西方占星",
+      "aliases": [
+        "星座",
+        "占星",
+        "星盘",
+        "西占"
+      ],
+      "level": "external_engine",
+      "reference": "references/systems/astrology.md",
+      "inputs": [
+        "日期/钟点/时区或共享schema3",
+        "上升宫位需要经纬度"
+      ],
+      "script": "astrology.py",
+      "prepare": "prepare_astrology.py",
+      "prefix": []
+    },
+    {
+      "id": "vedic",
+      "name": "吠陀恒星黄道基础",
+      "aliases": [
+        "吠陀",
+        "印度占星"
+      ],
+      "level": "sidereal_structure",
+      "reference": "references/systems/vedic.md",
+      "inputs": [
+        "同占星输入",
+        "明确岁差值方法；不是完整吠陀断法"
+      ],
+      "script": "astrology.py",
+      "prepare": "prepare_astrology.py",
+      "prefix": []
+    },
+    {
+      "id": "names",
+      "name": "姓名五格与三才",
+      "aliases": [
+        "姓名",
+        "姓名学",
+        "起名",
+        "五格"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/names.md",
+      "inputs": [
+        "明确姓与名",
+        "显式笔画或已准备的固定字库；康熙口径不自动折算"
+      ],
+      "script": "name_analysis.py",
+      "prepare": "prepare_name_dictionary.py",
+      "prefix": []
+    },
+    {
+      "id": "numerology",
+      "name": "数秘",
+      "aliases": [
+        "数秘",
+        "生命灵数"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/numerology.md",
+      "inputs": [
+        "生日或明确拉丁字母姓名",
+        "归约与主数约定"
+      ],
+      "script": "symbolic.py",
+      "prepare": null,
+      "prefix": [
+        "numerology"
+      ]
+    },
+    {
+      "id": "tarot",
+      "name": "塔罗",
+      "aliases": [
+        "塔罗",
+        "塔罗牌"
+      ],
+      "level": "symbolic_sampling",
+      "reference": "references/systems/tarot.md",
+      "inputs": [
+        "牌阵与虚拟抽样或手工给牌"
+      ],
+      "script": "symbolic.py",
+      "prepare": null,
+      "prefix": [
+        "tarot"
+      ]
+    },
+    {
+      "id": "electional",
+      "name": "黄历表与择日参考",
+      "aliases": [
+        "择日",
+        "黄历",
+        "选日子"
+      ],
+      "level": "calendar_table_only",
+      "reference": "references/systems/electional.md",
+      "inputs": [
+        "中国UTC+08用事日期",
+        "个性化择日不由表项自动证明"
+      ],
+      "script": "almanac.py",
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "palm",
+      "name": "手相图像与传统符号",
+      "aliases": [
+        "手相",
+        "掌纹"
+      ],
+      "level": "visual_guidance",
+      "reference": "references/systems/palm.md",
+      "inputs": [
+        "清晰手部图像或明确的用户观察",
+        "仅可见特征，不据此推人格、健康或寿命"
+      ],
+      "script": "visual_intake.py",
+      "prepare": null,
+      "prefix": [
+        "--system",
+        "palm"
+      ]
+    },
+    {
+      "id": "face",
+      "name": "面相图像与传统术语",
+      "aliases": [
+        "面相",
+        "相术"
+      ],
+      "level": "visual_guidance",
+      "reference": "references/systems/face.md",
+      "inputs": [
+        "清晰图像或明确的用户观察",
+        "仅可见特征，不据此推人格、身份、健康或命运"
+      ],
+      "script": "visual_intake.py",
+      "prepare": null,
+      "prefix": [
+        "--system",
+        "face"
+      ]
+    },
+    {
+      "id": "fengshui",
+      "name": "风水与空间资料",
+      "aliases": [
+        "风水",
+        "堪舆"
+      ],
+      "level": "reference_only",
+      "reference": "references/systems/fengshui.md",
+      "inputs": [
+        "真实平面/朝向/用途",
+        "区分实际空间条件与传统象征"
+      ],
+      "script": null,
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "qimen",
+      "name": "奇门遁甲",
+      "aliases": [
+        "奇门",
+        "奇门遁甲"
+      ],
+      "level": "reference_only",
+      "reference": "references/systems/qimen.md",
+      "inputs": [
+        "用户已有盘及起局规则/时间",
+        "本版没有自动起局引擎"
+      ],
+      "script": null,
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "liuren",
+      "name": "六壬",
+      "aliases": [
+        "六壬",
+        "大六壬"
+      ],
+      "level": "reference_only",
+      "reference": "references/systems/liuren.md",
+      "inputs": [
+        "用户已有四课三传等盘面与规则",
+        "不把小六壬混作完整大六壬"
+      ],
+      "script": null,
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "human_design",
+      "name": "人类图资料",
+      "aliases": [
+        "人类图"
+      ],
+      "level": "reference_only",
+      "reference": "references/systems/human_design.md",
+      "inputs": [
+        "用户已有图与已知计算口径",
+        "本版没有完整自动闸门/通道引擎"
+      ],
+      "script": null,
+      "prepare": null,
+      "prefix": []
+    },
+    {
+      "id": "xiaoliuren",
+      "name": "小六壬",
+      "aliases": [
+        "小六壬"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/xiaoliuren.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "xiaoliuren"
+      ]
+    },
+    {
+      "id": "jinkoujue",
+      "name": "六壬金口诀",
+      "aliases": [
+        "金口诀",
+        "金口訣"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/jinkoujue.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "jinkoujue"
+      ]
+    },
+    {
+      "id": "qizheng",
+      "name": "七政四余",
+      "aliases": [
+        "七政四余",
+        "七政"
+      ],
+      "level": "external_engine",
+      "reference": "references/systems/qizheng.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": "prepare_astrology.py",
+      "prefix": [
+        "qizheng"
+      ]
+    },
+    {
+      "id": "taiyi",
+      "name": "太乙神数",
+      "aliases": [
+        "太乙",
+        "太乙神数"
+      ],
+      "level": "external_engine",
+      "reference": "references/systems/taiyi.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": "prepare_taiyi.py",
+      "prefix": [
+        "taiyi"
+      ]
+    },
+    {
+      "id": "sukuyo",
+      "name": "宿曜",
+      "aliases": [
+        "宿曜",
+        "宿曜占星"
+      ],
+      "level": "calendar_table_only",
+      "reference": "references/systems/sukuyo.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "sukuyo"
+      ]
+    },
+    {
+      "id": "yilin",
+      "name": "焦氏易林",
+      "aliases": [
+        "易林",
+        "焦氏易林"
+      ],
+      "level": "calculation",
+      "reference": "references/systems/yilin.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "yilin"
+      ]
+    },
+    {
+      "id": "lingqijing",
+      "name": "灵棋经",
+      "aliases": [
+        "灵棋",
+        "灵棋经"
+      ],
+      "level": "symbolic_sampling",
+      "reference": "references/systems/lingqijing.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "lingqijing"
+      ]
+    },
+    {
+      "id": "lenormand",
+      "name": "雷诺曼",
+      "aliases": [
+        "雷诺曼",
+        "雷诺曼牌"
+      ],
+      "level": "symbolic_sampling",
+      "reference": "references/systems/lenormand.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "lenormand"
+      ]
+    },
+    {
+      "id": "geomancy",
+      "name": "西方土占",
+      "aliases": [
+        "西方土占",
+        "欧洲土占"
+      ],
+      "level": "symbolic_sampling",
+      "reference": "references/systems/geomancy.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": null,
+      "prefix": [
+        "geomancy"
+      ]
+    },
+    {
+      "id": "horary",
+      "name": "卜卦占星",
+      "aliases": [
+        "卜卦占星",
+        "时问占星"
+      ],
+      "level": "external_engine",
+      "reference": "references/systems/horary.md",
+      "inputs": [
+        "显式方法与独立输入；具体字段见可视工作台或方法说明"
+      ],
+      "script": "extra_methods.py",
+      "prepare": "prepare_astrology.py",
+      "prefix": [
+        "horary"
+      ]
+    }
+  ]
+}

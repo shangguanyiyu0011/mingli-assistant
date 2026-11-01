@@ -1,0 +1,63 @@
+{
+  "example": "Completely synthetic; no real person or previous case was used.",
+  "source_pdf": "demo-report.pdf",
+  "source_pdf_sha256": "9c5e877566c550e96c11e78c6ab66d5c6dfa06978f6a4a3661bf9f32da8ccd6a",
+  "pdf_pages": 14,
+  "rendering": "Poppler pdftoppm, PNG, 180 DPI, full PDF pages; no browser or generated mock screenshots.",
+  "screenshots": [
+    {
+      "file": "../docs/screenshots/overview.png",
+      "pdf_page": 1,
+      "size": [
+        1489,
+        2105
+      ],
+      "sha256": "c47ddf3bdb96ac5ab9201342490e064d7857c04f42a9033ef1eb575bfec6798d"
+    },
+    {
+      "file": "../docs/screenshots/bazi.png",
+      "pdf_page": 6,
+      "size": [
+        1489,
+        2105
+      ],
+      "sha256": "f55d3dae22f8443e4f9bcce3fe85dc3bfb76d3f5d3e0dc5ff548db0d7c8a0f46"
+    },
+    {
+      "file": "../docs/screenshots/ziwei.png",
+      "pdf_page": 8,
+      "size": [
+        1489,
+        2105
+      ],
+      "sha256": "221ef179525e38d14b6c67f895b3e44799cc18d16601d569b058c4ede84edef6"
+    },
+    {
+      "file": "../docs/screenshots/astrology.png",
+      "pdf_page": 10,
+      "size": [
+        1489,
+        2105
+      ],
+      "sha256": "89da8852dab8cf519ed4c9c428ce7f53b2810193b11528602ccc0ddf2984eef2"
+    },
+    {
+      "file": "../docs/screenshots/cards.png",
+      "pdf_page": 11,
+      "size": [
+        1489,
+        2105
+      ],
+      "sha256": "afe65385a85222a402e6f256cbb1396d3e53d71dcc4934319b2c173c68e0551d"
+    },
+    {
+      "file": "../docs/screenshots/lenormand.png",
+      "pdf_page": 12,
+      "size": [
+        1489,
+        2105
+      ],
+      "sha256": "206edc2808334a12400cb98283fa3f864f874dfed7a31118146aa2a1d7035841"
+    }
+  ]
+}

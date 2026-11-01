@@ -1,0 +1,2069 @@
+{
+  "schema_version": 1,
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "key": "hero",
+      "path": "assets/art/hero.png",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3717694,
+      "sha256": "dd2d1a0d98d9d773e78095d7b24374da9d684368432c72ffd6e27b5e20f5b20f",
+      "role": "卷首横幅",
+      "alt": "卷首横幅，敦煌青金风格",
+      "prompt": "Use case: stylized-concept. Asset: wide website hero artwork, landscape 3:2. Original Dunhuang inspired mural of layered desert mountains beneath a starry river, lotus and cloud motifs subtly at far edges. Central area calm deep lapis blue, negative space for overlaid text. Mineral lapis, sand paper, muted ochre red and matte gold, aged handmade paper, refined engraved illustration. No words, letters, numbers, logos, watermark or border.",
+      "visual_qa": "中心留白，左上生成一位飞天人物；无可见文字。"
+    },
+    {
+      "key": "tarot_major",
+      "path": "assets/art/tarot_major.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 4017064,
+      "sha256": "720c660bfc2cb980572103c985d1b0103b6c8e4fd236e32d6fc9de8eda0f3b87",
+      "role": "22张大阿卡纳图集",
+      "alt": "22张大阿卡纳图集，敦煌青金风格",
+      "prompt": "Use case: illustration-story. Asset: SQUARE canvas, 1536x1536 or 1024x1024, not portrait or landscape. A single strict tarot illustration atlas with exactly SIX columns by FOUR rows, equal grid cells filling the square canvas edge to edge; no gutters. Since canvas is square, each individual cell must be portrait 2:3. Exactly 24 independent compositions, no artwork crossing cell boundaries. First 22 cells in this exact row-major order, left to right, top to bottom: row 1 Fool traveler at cliff with small dog; Magician at table with raised wand; High Priestess seated between pillars with scroll; Empress among flowers; Emperor on throne; Hierophant blessing pupils. Row 2 Lovers couple; Chariot rider with two horses; Strength woman with lion; Hermit with lantern; Wheel of Fortune; Justice seated with scales and sword. Row 3 Hanged Man upside down from tree; Death skeletal rider; Temperance winged figure pouring between cups; Devil horned figure and bound couple; Tower struck by lightning; Star woman pouring water under stars. Row 4 Moon over two dogs; Sun with child on horse; Judgement angel sounding trumpet above people; World figure in wreath; two decorative blank lotus star patterns. Each is a different recognizable scene and contained in its own cell. Original Dunhuang mineral mural, lapis blue, paper sand, muted ochre red, matte gold. No words, letters, numerals, logos, watermarks. Priority: output square canvas and the exact 6-by-4 grid with correct scene order.",
+      "visual_qa": "方形1254×1254；6列4行，22幅主题顺序核对吻合、各不相同，最后两格为空牌。每格约209×313.5，2:3比例；因像素行高为半像素，tile高度交替313/314，分界线可能有细微手绘偏差。",
+      "atlas": {
+        "cols": 6,
+        "rows": 4,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "愚者",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "魔术师",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "女祭司",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "index": 3,
+            "name": "皇后",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "index": 4,
+            "name": "皇帝",
+            "row": 0,
+            "col": 4
+          },
+          {
+            "index": 5,
+            "name": "教皇",
+            "row": 0,
+            "col": 5
+          },
+          {
+            "index": 6,
+            "name": "恋人",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 7,
+            "name": "战车",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "index": 8,
+            "name": "力量",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "index": 9,
+            "name": "隐士",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "index": 10,
+            "name": "命运之轮",
+            "row": 1,
+            "col": 4
+          },
+          {
+            "index": 11,
+            "name": "正义",
+            "row": 1,
+            "col": 5
+          },
+          {
+            "index": 12,
+            "name": "倒吊人",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "index": 13,
+            "name": "死神",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "index": 14,
+            "name": "节制",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "index": 15,
+            "name": "恶魔",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "index": 16,
+            "name": "高塔",
+            "row": 2,
+            "col": 4
+          },
+          {
+            "index": 17,
+            "name": "星星",
+            "row": 2,
+            "col": 5
+          },
+          {
+            "index": 18,
+            "name": "月亮",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "index": 19,
+            "name": "太阳",
+            "row": 3,
+            "col": 1
+          },
+          {
+            "index": 20,
+            "name": "审判",
+            "row": 3,
+            "col": 2
+          },
+          {
+            "index": 21,
+            "name": "世界",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "index": 22,
+            "name": "装饰空牌",
+            "row": 3,
+            "col": 4
+          },
+          {
+            "index": 23,
+            "name": "装饰空牌",
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "verified_for_card_binding": true,
+        "tiles": [
+          {
+            "index": 0,
+            "name": "愚者",
+            "x": 0,
+            "y": 0,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 1,
+            "name": "魔术师",
+            "x": 209,
+            "y": 0,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 2,
+            "name": "女祭司",
+            "x": 418,
+            "y": 0,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 3,
+            "name": "皇后",
+            "x": 627,
+            "y": 0,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 4,
+            "name": "皇帝",
+            "x": 836,
+            "y": 0,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 5,
+            "name": "教皇",
+            "x": 1045,
+            "y": 0,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 6,
+            "name": "恋人",
+            "x": 0,
+            "y": 314,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 7,
+            "name": "战车",
+            "x": 209,
+            "y": 314,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 8,
+            "name": "力量",
+            "x": 418,
+            "y": 314,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 9,
+            "name": "隐士",
+            "x": 627,
+            "y": 314,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 10,
+            "name": "命运之轮",
+            "x": 836,
+            "y": 314,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 11,
+            "name": "正义",
+            "x": 1045,
+            "y": 314,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 12,
+            "name": "倒吊人",
+            "x": 0,
+            "y": 627,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 13,
+            "name": "死神",
+            "x": 209,
+            "y": 627,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 14,
+            "name": "节制",
+            "x": 418,
+            "y": 627,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 15,
+            "name": "恶魔",
+            "x": 627,
+            "y": 627,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 16,
+            "name": "高塔",
+            "x": 836,
+            "y": 627,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 17,
+            "name": "星星",
+            "x": 1045,
+            "y": 627,
+            "width": 209,
+            "height": 313
+          },
+          {
+            "index": 18,
+            "name": "月亮",
+            "x": 0,
+            "y": 940,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 19,
+            "name": "太阳",
+            "x": 209,
+            "y": 940,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 20,
+            "name": "审判",
+            "x": 418,
+            "y": 940,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 21,
+            "name": "世界",
+            "x": 627,
+            "y": 940,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 22,
+            "name": "装饰空牌",
+            "x": 836,
+            "y": 940,
+            "width": 209,
+            "height": 314
+          },
+          {
+            "index": 23,
+            "name": "装饰空牌",
+            "x": 1045,
+            "y": 940,
+            "width": 209,
+            "height": 314
+          }
+        ]
+      }
+    },
+    {
+      "key": "tarot_suits",
+      "path": "assets/art/tarot_suits.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3948570,
+      "sha256": "a338f155f73b0896683e71ef17d3d9cd464a13ef3ad3e84cd0846e82ade7ba27",
+      "role": "四花色纹理图集",
+      "alt": "四花色纹理图集，敦煌青金风格",
+      "prompt": "Use case: stylized-concept. Asset: four suit texture sprite atlas, exactly 2 columns by 2 rows, no gutters, four equal independent compositions: top left ornate wooden wand with leaves, top right golden chalice, bottom left upright sword, bottom right gold pentacle coin with five-point star. Dunhuang inspired carved mineral pigments on aged sand paper, lapis, muted red, matte gold; symbols centered and distinct, no crossing cells. No text, letters, numerals, logos, watermark.",
+      "visual_qa": "四个花色位置正确，不是56张独立牌画。",
+      "atlas": {
+        "cols": 2,
+        "rows": 2,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "权杖",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "圣杯",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "宝剑",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 3,
+            "name": "星币",
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "verified_for_card_binding": true
+      }
+    },
+    {
+      "key": "lenormand",
+      "path": "assets/art/lenormand.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 3992078,
+      "sha256": "4fefcc4c36aa6df90e10bfd1d8a0b27031e71f54c42a2a55527f38eea6247603",
+      "role": "36张雷诺曼象征图集",
+      "alt": "36张雷诺曼象征图集，敦煌青金风格",
+      "prompt": "Use case: stylized-concept. Asset: Lenormand symbols atlas, precisely 6 columns by 6 rows equal independent square cells, no gutter and no object crossing cell boundaries. Row-major subjects row1 rider, clover, ship, house, tree, clouds; row2 snake, coffin, bouquet, scythe, whip, birds; row3 child, fox, bear, stars, stork, dog; row4 tower, garden, mountain, forked roads, mice, heart; row5 ring, book, letter envelope, man, woman, lilies; row6 sun, moon, key, fish, anchor, cross. Each subject clearly identifiable, one per cell, centered, on aged sand paper. Original Dunhuang-inspired lapis, muted red and matte gold engravings. No text, numbers, watermark or logos.",
+      "visual_qa": "36项与源码次序吻合；1254×1254，每格209×209。",
+      "atlas": {
+        "cols": 6,
+        "rows": 6,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "骑士",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "四叶草",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "船",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "index": 3,
+            "name": "房子",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "index": 4,
+            "name": "树",
+            "row": 0,
+            "col": 4
+          },
+          {
+            "index": 5,
+            "name": "云",
+            "row": 0,
+            "col": 5
+          },
+          {
+            "index": 6,
+            "name": "蛇",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 7,
+            "name": "棺材",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "index": 8,
+            "name": "花束",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "index": 9,
+            "name": "镰刀",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "index": 10,
+            "name": "鞭子",
+            "row": 1,
+            "col": 4
+          },
+          {
+            "index": 11,
+            "name": "鸟",
+            "row": 1,
+            "col": 5
+          },
+          {
+            "index": 12,
+            "name": "孩子",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "index": 13,
+            "name": "狐狸",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "index": 14,
+            "name": "熊",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "index": 15,
+            "name": "星星",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "index": 16,
+            "name": "鹳",
+            "row": 2,
+            "col": 4
+          },
+          {
+            "index": 17,
+            "name": "狗",
+            "row": 2,
+            "col": 5
+          },
+          {
+            "index": 18,
+            "name": "塔",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "index": 19,
+            "name": "花园",
+            "row": 3,
+            "col": 1
+          },
+          {
+            "index": 20,
+            "name": "山",
+            "row": 3,
+            "col": 2
+          },
+          {
+            "index": 21,
+            "name": "岔路",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "index": 22,
+            "name": "老鼠",
+            "row": 3,
+            "col": 4
+          },
+          {
+            "index": 23,
+            "name": "心",
+            "row": 3,
+            "col": 5
+          },
+          {
+            "index": 24,
+            "name": "戒指",
+            "row": 4,
+            "col": 0
+          },
+          {
+            "index": 25,
+            "name": "书",
+            "row": 4,
+            "col": 1
+          },
+          {
+            "index": 26,
+            "name": "信",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "index": 27,
+            "name": "男士",
+            "row": 4,
+            "col": 3
+          },
+          {
+            "index": 28,
+            "name": "女士",
+            "row": 4,
+            "col": 4
+          },
+          {
+            "index": 29,
+            "name": "百合",
+            "row": 4,
+            "col": 5
+          },
+          {
+            "index": 30,
+            "name": "太阳",
+            "row": 5,
+            "col": 0
+          },
+          {
+            "index": 31,
+            "name": "月亮",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "index": 32,
+            "name": "钥匙",
+            "row": 5,
+            "col": 2
+          },
+          {
+            "index": 33,
+            "name": "鱼",
+            "row": 5,
+            "col": 3
+          },
+          {
+            "index": 34,
+            "name": "锚",
+            "row": 5,
+            "col": 4
+          },
+          {
+            "index": 35,
+            "name": "十字架",
+            "row": 5,
+            "col": 5
+          }
+        ],
+        "verified_for_card_binding": true,
+        "tiles": [
+          {
+            "index": 0,
+            "name": "骑士",
+            "x": 0,
+            "y": 0,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 1,
+            "name": "四叶草",
+            "x": 209,
+            "y": 0,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 2,
+            "name": "船",
+            "x": 418,
+            "y": 0,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 3,
+            "name": "房子",
+            "x": 627,
+            "y": 0,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 4,
+            "name": "树",
+            "x": 836,
+            "y": 0,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 5,
+            "name": "云",
+            "x": 1045,
+            "y": 0,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 6,
+            "name": "蛇",
+            "x": 0,
+            "y": 209,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 7,
+            "name": "棺材",
+            "x": 209,
+            "y": 209,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 8,
+            "name": "花束",
+            "x": 418,
+            "y": 209,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 9,
+            "name": "镰刀",
+            "x": 627,
+            "y": 209,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 10,
+            "name": "鞭子",
+            "x": 836,
+            "y": 209,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 11,
+            "name": "鸟",
+            "x": 1045,
+            "y": 209,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 12,
+            "name": "孩子",
+            "x": 0,
+            "y": 418,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 13,
+            "name": "狐狸",
+            "x": 209,
+            "y": 418,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 14,
+            "name": "熊",
+            "x": 418,
+            "y": 418,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 15,
+            "name": "星星",
+            "x": 627,
+            "y": 418,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 16,
+            "name": "鹳",
+            "x": 836,
+            "y": 418,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 17,
+            "name": "狗",
+            "x": 1045,
+            "y": 418,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 18,
+            "name": "塔",
+            "x": 0,
+            "y": 627,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 19,
+            "name": "花园",
+            "x": 209,
+            "y": 627,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 20,
+            "name": "山",
+            "x": 418,
+            "y": 627,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 21,
+            "name": "岔路",
+            "x": 627,
+            "y": 627,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 22,
+            "name": "老鼠",
+            "x": 836,
+            "y": 627,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 23,
+            "name": "心",
+            "x": 1045,
+            "y": 627,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 24,
+            "name": "戒指",
+            "x": 0,
+            "y": 836,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 25,
+            "name": "书",
+            "x": 209,
+            "y": 836,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 26,
+            "name": "信",
+            "x": 418,
+            "y": 836,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 27,
+            "name": "男士",
+            "x": 627,
+            "y": 836,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 28,
+            "name": "女士",
+            "x": 836,
+            "y": 836,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 29,
+            "name": "百合",
+            "x": 1045,
+            "y": 836,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 30,
+            "name": "太阳",
+            "x": 0,
+            "y": 1045,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 31,
+            "name": "月亮",
+            "x": 209,
+            "y": 1045,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 32,
+            "name": "钥匙",
+            "x": 418,
+            "y": 1045,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 33,
+            "name": "鱼",
+            "x": 627,
+            "y": 1045,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 34,
+            "name": "锚",
+            "x": 836,
+            "y": 1045,
+            "width": 209,
+            "height": 209
+          },
+          {
+            "index": 35,
+            "name": "十字架",
+            "x": 1045,
+            "y": 1045,
+            "width": 209,
+            "height": 209
+          }
+        ]
+      }
+    },
+    {
+      "key": "card_back",
+      "path": "assets/art/card_back.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 3784214,
+      "sha256": "bdb44eb76411e23259fa46a738293dce9232185228eab09c0e44979c09e73139",
+      "role": "牌背",
+      "alt": "牌背，敦煌青金风格",
+      "prompt": "Use case: stylized-concept. Asset: vertical 2:3 card back. Perfectly symmetrical lotus, crescent moon and star ornament, delicate Dunhuang gilded filigree on deep lapis blue mineral pigment, matte gold and sand highlights, ancient paper grain, elegant flat printed design. No words, numerals, logo, watermark.",
+      "visual_qa": "2:3，莲花与星月纹，无可见文字。"
+    },
+    {
+      "key": "coins",
+      "path": "assets/art/coins.png",
+      "format": "png",
+      "width": 1774,
+      "height": 887,
+      "bytes": 3584525,
+      "sha256": "72c94104200e44ffc8fbb5da46a648df17898dea907b647f91928203ebc2f795",
+      "role": "三枚铜钱装饰",
+      "alt": "三枚铜钱装饰，敦煌青金风格",
+      "prompt": "Use case: stylized-concept. Asset: wide horizontal ornamental illustration. Three ancient round gold bronze Chinese coins with square holes placed clearly apart across lower half, laid on sand colored handmade paper, flowing Dunhuang lapis clouds and matte gold linework softly framing them, calm texture. No inscription on coins, no characters, no hexagrams, no numbers, logo or watermark.",
+      "visual_qa": "三枚方孔钱清楚，无可见文字；为装饰，不表征摇卦结果。"
+    },
+    {
+      "key": "tarot_wands",
+      "path": "assets/art/tarot_wands.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 4182237,
+      "sha256": "396a6a43390056915f42116fab90f40a70e903f2df784e18b4c24d54dcb12d0e",
+      "role": "权杖14张小阿卡纳图集",
+      "alt": "敦煌青金风格权杖牌图",
+      "prompt": "Use case illustration-story. Produce one complete tarot card atlas on portrait 2:3 canvas: strict 4 columns by 4 rows touching with no gaps, all 16 equal rectangular cells, independent compositions, no element crosses cells. Each cell vertical 2:3. Each scene distinct and clearly identifiable, exactly in the specified reading order from left to right then top to bottom. Final two cells are empty decorative lotus star patterns. Dunhuang original mineral mural style, lapis blue, sand, ochre red and matte gold. No words, letters, numerals, logos, watermark. Scene fidelity and grid placement are essential. Suit of wands, 14 unique illustrations: 1 hand holding sprouting wand; 2 figure with two wands surveying horizon; 3 three wands and traveler watching distant ships; 4 four wands at wedding celebration; 5 five people competing with staves; 6 victorious rider with laurel staff; 7 figure defending hill with staff; 8 eight staves flying across sky; 9 wounded guard leaning on staff with eight behind; 10 person carrying ten heavy staves; 11 youthful page studying a wand; 12 knight charging on horseback with a wand; 13 queen seated with wand and sunflower; 14 king seated with wand and lion motifs.",
+      "visual_qa": "14幅场景各不相同，按牌序对照主题吻合。 末两格为装饰空牌；4×4等分，单格256×384。",
+      "atlas": {
+        "cols": 4,
+        "rows": 4,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "权杖一",
+            "card_id": "wands-ace",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "权杖二",
+            "card_id": "wands-02",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "权杖三",
+            "card_id": "wands-03",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "index": 3,
+            "name": "权杖四",
+            "card_id": "wands-04",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "index": 4,
+            "name": "权杖五",
+            "card_id": "wands-05",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 5,
+            "name": "权杖六",
+            "card_id": "wands-06",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "index": 6,
+            "name": "权杖七",
+            "card_id": "wands-07",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "index": 7,
+            "name": "权杖八",
+            "card_id": "wands-08",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "index": 8,
+            "name": "权杖九",
+            "card_id": "wands-09",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "index": 9,
+            "name": "权杖十",
+            "card_id": "wands-10",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "index": 10,
+            "name": "权杖侍从",
+            "card_id": "wands-page",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "index": 11,
+            "name": "权杖骑士",
+            "card_id": "wands-knight",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "index": 12,
+            "name": "权杖王后",
+            "card_id": "wands-queen",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "index": 13,
+            "name": "权杖国王",
+            "card_id": "wands-king",
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "tiles": [
+          {
+            "index": 0,
+            "name": "权杖一",
+            "card_id": "wands-ace",
+            "row": 0,
+            "col": 0,
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 1,
+            "name": "权杖二",
+            "card_id": "wands-02",
+            "row": 0,
+            "col": 1,
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 2,
+            "name": "权杖三",
+            "card_id": "wands-03",
+            "row": 0,
+            "col": 2,
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 3,
+            "name": "权杖四",
+            "card_id": "wands-04",
+            "row": 0,
+            "col": 3,
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 4,
+            "name": "权杖五",
+            "card_id": "wands-05",
+            "row": 1,
+            "col": 0,
+            "x": 0,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 5,
+            "name": "权杖六",
+            "card_id": "wands-06",
+            "row": 1,
+            "col": 1,
+            "x": 256,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 6,
+            "name": "权杖七",
+            "card_id": "wands-07",
+            "row": 1,
+            "col": 2,
+            "x": 512,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 7,
+            "name": "权杖八",
+            "card_id": "wands-08",
+            "row": 1,
+            "col": 3,
+            "x": 768,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 8,
+            "name": "权杖九",
+            "card_id": "wands-09",
+            "row": 2,
+            "col": 0,
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 9,
+            "name": "权杖十",
+            "card_id": "wands-10",
+            "row": 2,
+            "col": 1,
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 10,
+            "name": "权杖侍从",
+            "card_id": "wands-page",
+            "row": 2,
+            "col": 2,
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 11,
+            "name": "权杖骑士",
+            "card_id": "wands-knight",
+            "row": 2,
+            "col": 3,
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 12,
+            "name": "权杖王后",
+            "card_id": "wands-queen",
+            "row": 3,
+            "col": 0,
+            "x": 0,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 13,
+            "name": "权杖国王",
+            "card_id": "wands-king",
+            "row": 3,
+            "col": 1,
+            "x": 256,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          }
+        ],
+        "verified_for_card_binding": true
+      }
+    },
+    {
+      "key": "tarot_cups",
+      "path": "assets/art/tarot_cups.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 4080445,
+      "sha256": "5f739f3f3a4287a3db29ce43bcb841e283777b4e5fec7b04cde5024f70d6e72c",
+      "role": "圣杯14张小阿卡纳图集",
+      "alt": "敦煌青金风格圣杯牌图",
+      "prompt": "Use case illustration-story. Produce one complete tarot card atlas on portrait 2:3 canvas: strict 4 columns by 4 rows touching with no gaps, all 16 equal rectangular cells, independent compositions, no element crosses cells. Each cell vertical 2:3. Each scene distinct and clearly identifiable, exactly in the specified reading order from left to right then top to bottom. Final two cells are empty decorative lotus star patterns. Dunhuang original mineral mural style, lapis blue, sand, ochre red and matte gold. No words, letters, numerals, logos, watermark. Scene fidelity and grid placement are essential. Suit of cups, 14 unique illustrations: 1 hand offering overflowing chalice; 2 two people exchanging cups; 3 three friends raise cups in celebration; 4 seated figure under tree ignoring offered cup; 5 cloaked figure grieving three spilled cups with two standing; 6 child offers flowers in cup to another child; 7 person chooses among seven cups in clouds; 8 traveler walks away from cups toward mountains; 9 satisfied seated person with cups behind; 10 happy family under rainbow of cups; 11 page holding cup with fish; 12 knight on horse offers cup; 13 queen seated by water gazing into cup; 14 king seated on throne amidst waves holding cup.",
+      "visual_qa": "14幅场景各不相同，按牌序对照主题吻合；圣杯二共持一杯、五的倾倒杯数有偏差。 末两格为装饰空牌；4×4等分，单格256×384。",
+      "atlas": {
+        "cols": 4,
+        "rows": 4,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "圣杯一",
+            "card_id": "cups-ace",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "圣杯二",
+            "card_id": "cups-02",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "圣杯三",
+            "card_id": "cups-03",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "index": 3,
+            "name": "圣杯四",
+            "card_id": "cups-04",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "index": 4,
+            "name": "圣杯五",
+            "card_id": "cups-05",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 5,
+            "name": "圣杯六",
+            "card_id": "cups-06",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "index": 6,
+            "name": "圣杯七",
+            "card_id": "cups-07",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "index": 7,
+            "name": "圣杯八",
+            "card_id": "cups-08",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "index": 8,
+            "name": "圣杯九",
+            "card_id": "cups-09",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "index": 9,
+            "name": "圣杯十",
+            "card_id": "cups-10",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "index": 10,
+            "name": "圣杯侍从",
+            "card_id": "cups-page",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "index": 11,
+            "name": "圣杯骑士",
+            "card_id": "cups-knight",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "index": 12,
+            "name": "圣杯王后",
+            "card_id": "cups-queen",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "index": 13,
+            "name": "圣杯国王",
+            "card_id": "cups-king",
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "tiles": [
+          {
+            "index": 0,
+            "name": "圣杯一",
+            "card_id": "cups-ace",
+            "row": 0,
+            "col": 0,
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 1,
+            "name": "圣杯二",
+            "card_id": "cups-02",
+            "row": 0,
+            "col": 1,
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 2,
+            "name": "圣杯三",
+            "card_id": "cups-03",
+            "row": 0,
+            "col": 2,
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 3,
+            "name": "圣杯四",
+            "card_id": "cups-04",
+            "row": 0,
+            "col": 3,
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 4,
+            "name": "圣杯五",
+            "card_id": "cups-05",
+            "row": 1,
+            "col": 0,
+            "x": 0,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 5,
+            "name": "圣杯六",
+            "card_id": "cups-06",
+            "row": 1,
+            "col": 1,
+            "x": 256,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 6,
+            "name": "圣杯七",
+            "card_id": "cups-07",
+            "row": 1,
+            "col": 2,
+            "x": 512,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 7,
+            "name": "圣杯八",
+            "card_id": "cups-08",
+            "row": 1,
+            "col": 3,
+            "x": 768,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 8,
+            "name": "圣杯九",
+            "card_id": "cups-09",
+            "row": 2,
+            "col": 0,
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 9,
+            "name": "圣杯十",
+            "card_id": "cups-10",
+            "row": 2,
+            "col": 1,
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 10,
+            "name": "圣杯侍从",
+            "card_id": "cups-page",
+            "row": 2,
+            "col": 2,
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 11,
+            "name": "圣杯骑士",
+            "card_id": "cups-knight",
+            "row": 2,
+            "col": 3,
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 12,
+            "name": "圣杯王后",
+            "card_id": "cups-queen",
+            "row": 3,
+            "col": 0,
+            "x": 0,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 13,
+            "name": "圣杯国王",
+            "card_id": "cups-king",
+            "row": 3,
+            "col": 1,
+            "x": 256,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          }
+        ],
+        "verified_for_card_binding": true
+      }
+    },
+    {
+      "key": "tarot_swords",
+      "path": "assets/art/tarot_swords.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 4047248,
+      "sha256": "27fa8fa846851c9020c83c3bbc1be280e2b0634505833f9bd3b8f1e15ba1d1ff",
+      "role": "宝剑14张小阿卡纳图集",
+      "alt": "敦煌青金风格宝剑牌图",
+      "prompt": "Use case illustration-story. Produce one complete tarot card atlas on portrait 2:3 canvas: strict 4 columns by 4 rows touching with no gaps, all 16 equal rectangular cells, independent compositions, no element crosses cells. Each cell vertical 2:3. Each scene distinct and clearly identifiable, exactly in the specified reading order from left to right then top to bottom. Final two cells are empty decorative lotus star patterns. Dunhuang original mineral mural style, lapis blue, sand, ochre red and matte gold. No words, letters, numerals, logos, watermark. Scene fidelity and grid placement are essential. Suit of swords, 14 unique illustrations: 1 hand holds upright sword crowned in wreath; 2 blindfolded person holds two crossed swords by sea; 3 heart pierced by three swords in rain; 4 resting person in sanctuary under swords; 5 victor gathers swords as two figures depart; 6 ferryman carries passengers across water with six swords; 7 stealthy figure carrying swords from camp; 8 blindfolded figure loosely surrounded by swords; 9 worried person sits awake in bed with swords behind; 10 fallen figure at dawn with ten swords; 11 alert page holds sword in wind; 12 knight charges on horse with sword; 13 queen on throne holds upright sword; 14 king on throne holds sword upright and scales.",
+      "visual_qa": "14幅场景各不相同，按牌序对照主题吻合；部分剑数量有偏差。 末两格为装饰空牌；4×4等分，单格256×384。",
+      "atlas": {
+        "cols": 4,
+        "rows": 4,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "宝剑一",
+            "card_id": "swords-ace",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "宝剑二",
+            "card_id": "swords-02",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "宝剑三",
+            "card_id": "swords-03",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "index": 3,
+            "name": "宝剑四",
+            "card_id": "swords-04",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "index": 4,
+            "name": "宝剑五",
+            "card_id": "swords-05",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 5,
+            "name": "宝剑六",
+            "card_id": "swords-06",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "index": 6,
+            "name": "宝剑七",
+            "card_id": "swords-07",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "index": 7,
+            "name": "宝剑八",
+            "card_id": "swords-08",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "index": 8,
+            "name": "宝剑九",
+            "card_id": "swords-09",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "index": 9,
+            "name": "宝剑十",
+            "card_id": "swords-10",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "index": 10,
+            "name": "宝剑侍从",
+            "card_id": "swords-page",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "index": 11,
+            "name": "宝剑骑士",
+            "card_id": "swords-knight",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "index": 12,
+            "name": "宝剑王后",
+            "card_id": "swords-queen",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "index": 13,
+            "name": "宝剑国王",
+            "card_id": "swords-king",
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "tiles": [
+          {
+            "index": 0,
+            "name": "宝剑一",
+            "card_id": "swords-ace",
+            "row": 0,
+            "col": 0,
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 1,
+            "name": "宝剑二",
+            "card_id": "swords-02",
+            "row": 0,
+            "col": 1,
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 2,
+            "name": "宝剑三",
+            "card_id": "swords-03",
+            "row": 0,
+            "col": 2,
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 3,
+            "name": "宝剑四",
+            "card_id": "swords-04",
+            "row": 0,
+            "col": 3,
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 4,
+            "name": "宝剑五",
+            "card_id": "swords-05",
+            "row": 1,
+            "col": 0,
+            "x": 0,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 5,
+            "name": "宝剑六",
+            "card_id": "swords-06",
+            "row": 1,
+            "col": 1,
+            "x": 256,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 6,
+            "name": "宝剑七",
+            "card_id": "swords-07",
+            "row": 1,
+            "col": 2,
+            "x": 512,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 7,
+            "name": "宝剑八",
+            "card_id": "swords-08",
+            "row": 1,
+            "col": 3,
+            "x": 768,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 8,
+            "name": "宝剑九",
+            "card_id": "swords-09",
+            "row": 2,
+            "col": 0,
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 9,
+            "name": "宝剑十",
+            "card_id": "swords-10",
+            "row": 2,
+            "col": 1,
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 10,
+            "name": "宝剑侍从",
+            "card_id": "swords-page",
+            "row": 2,
+            "col": 2,
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 11,
+            "name": "宝剑骑士",
+            "card_id": "swords-knight",
+            "row": 2,
+            "col": 3,
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 12,
+            "name": "宝剑王后",
+            "card_id": "swords-queen",
+            "row": 3,
+            "col": 0,
+            "x": 0,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 13,
+            "name": "宝剑国王",
+            "card_id": "swords-king",
+            "row": 3,
+            "col": 1,
+            "x": 256,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          }
+        ],
+        "verified_for_card_binding": true
+      }
+    },
+    {
+      "key": "tarot_pentacles",
+      "path": "assets/art/tarot_pentacles.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 4171563,
+      "sha256": "81a8c9fcec52b9c34df95ff26dfd165d3e1716958fe4068cc4889227f7a2a443",
+      "role": "星币14张小阿卡纳图集",
+      "alt": "敦煌青金风格星币牌图",
+      "prompt": "Use case illustration-story. Produce one complete tarot card atlas on portrait 2:3 canvas: strict 4 columns by 4 rows touching with no gaps, all 16 equal rectangular cells, independent compositions, no element crosses cells. Each cell vertical 2:3. Each scene distinct and clearly identifiable, exactly in the specified reading order from left to right then top to bottom. Final two cells are empty decorative lotus star patterns. Dunhuang original mineral mural style, lapis blue, sand, ochre red and matte gold. No words, letters, numerals, logos, watermark. Scene fidelity and grid placement are essential. Suit of pentacles, 14 unique illustrations: 1 hand offers gold pentacle in garden; 2 juggler balances two coins; 3 three craftspeople collaborate at arch; 4 seated figure holds four coins protectively; 5 two travelers outside lit window in snow; 6 generous patron shares coins using scales; 7 gardener evaluates seven pentacles growing on vine; 8 artisan carves coins at workbench; 9 independent figure in vineyard with bird and coins; 10 family elders child and dog in courtyard with coins; 11 young page studies pentacle; 12 knight on patient horse holds pentacle over field; 13 queen holds pentacle amidst garden; 14 king sits on throne holding pentacle surrounded by vines.",
+      "visual_qa": "14幅场景各不相同，按牌序对照主题吻合；四图中显见三枚、五图窗上六枚，数量不精确。 末两格为装饰空牌；4×4等分，单格256×384。",
+      "atlas": {
+        "cols": 4,
+        "rows": 4,
+        "index_mapping": [
+          {
+            "index": 0,
+            "name": "星币一",
+            "card_id": "pentacles-ace",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "index": 1,
+            "name": "星币二",
+            "card_id": "pentacles-02",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "index": 2,
+            "name": "星币三",
+            "card_id": "pentacles-03",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "index": 3,
+            "name": "星币四",
+            "card_id": "pentacles-04",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "index": 4,
+            "name": "星币五",
+            "card_id": "pentacles-05",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "index": 5,
+            "name": "星币六",
+            "card_id": "pentacles-06",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "index": 6,
+            "name": "星币七",
+            "card_id": "pentacles-07",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "index": 7,
+            "name": "星币八",
+            "card_id": "pentacles-08",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "index": 8,
+            "name": "星币九",
+            "card_id": "pentacles-09",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "index": 9,
+            "name": "星币十",
+            "card_id": "pentacles-10",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "index": 10,
+            "name": "星币侍从",
+            "card_id": "pentacles-page",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "index": 11,
+            "name": "星币骑士",
+            "card_id": "pentacles-knight",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "index": 12,
+            "name": "星币王后",
+            "card_id": "pentacles-queen",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "index": 13,
+            "name": "星币国王",
+            "card_id": "pentacles-king",
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "tiles": [
+          {
+            "index": 0,
+            "name": "星币一",
+            "card_id": "pentacles-ace",
+            "row": 0,
+            "col": 0,
+            "x": 0,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 1,
+            "name": "星币二",
+            "card_id": "pentacles-02",
+            "row": 0,
+            "col": 1,
+            "x": 256,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 2,
+            "name": "星币三",
+            "card_id": "pentacles-03",
+            "row": 0,
+            "col": 2,
+            "x": 512,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 3,
+            "name": "星币四",
+            "card_id": "pentacles-04",
+            "row": 0,
+            "col": 3,
+            "x": 768,
+            "y": 0,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 4,
+            "name": "星币五",
+            "card_id": "pentacles-05",
+            "row": 1,
+            "col": 0,
+            "x": 0,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 5,
+            "name": "星币六",
+            "card_id": "pentacles-06",
+            "row": 1,
+            "col": 1,
+            "x": 256,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 6,
+            "name": "星币七",
+            "card_id": "pentacles-07",
+            "row": 1,
+            "col": 2,
+            "x": 512,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 7,
+            "name": "星币八",
+            "card_id": "pentacles-08",
+            "row": 1,
+            "col": 3,
+            "x": 768,
+            "y": 384,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 8,
+            "name": "星币九",
+            "card_id": "pentacles-09",
+            "row": 2,
+            "col": 0,
+            "x": 0,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 9,
+            "name": "星币十",
+            "card_id": "pentacles-10",
+            "row": 2,
+            "col": 1,
+            "x": 256,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 10,
+            "name": "星币侍从",
+            "card_id": "pentacles-page",
+            "row": 2,
+            "col": 2,
+            "x": 512,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 11,
+            "name": "星币骑士",
+            "card_id": "pentacles-knight",
+            "row": 2,
+            "col": 3,
+            "x": 768,
+            "y": 768,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 12,
+            "name": "星币王后",
+            "card_id": "pentacles-queen",
+            "row": 3,
+            "col": 0,
+            "x": 0,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          },
+          {
+            "index": 13,
+            "name": "星币国王",
+            "card_id": "pentacles-king",
+            "row": 3,
+            "col": 1,
+            "x": 256,
+            "y": 1152,
+            "width": 256,
+            "height": 384
+          }
+        ],
+        "verified_for_card_binding": true
+      }
+    }
+  ]
+}

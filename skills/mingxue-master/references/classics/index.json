@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "edition": "core-text-check-2026-10-31",
+  "card_count": 16,
+  "sources": [
+    {
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/NLC416-11jh010455-35296_%E5%AD%90%E5%B9%B3%E7%9C%9F%E8%A9%AE.pdf",
+      "version": "国图藏世界图书馆发行本；馆藏号MG/B992.3；出版年目录标[19--?]；Commons文件2023-06-11上传，287 PDF页",
+      "access_date": "2026-10-31",
+      "inspection_method": "下载公开扫描PDF，以Poppler渲染并逐页目视核对相关文字",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "bibliographic_url": "https://commons.wikimedia.org/wiki/File:NLC416-11jh010455-35296_子平真詮.pdf",
+      "source_file_sha256": "71402a780b0351b54edf121a51bc4a4a4ce5896496c35b954563ee06f1a6f620",
+      "base_edition_status": "已核本扫描页；未与其他刻本校勘"
+    },
+    {
+      "source_id": "SRC-DT-10",
+      "book": "滴天髓",
+      "url": "https://zh.wikisource.org/w/index.php?title=滴天髓/10&oldid=844358",
+      "version": "维基文库《滴天髓辑要》体用论电子录文，oldid=844358；正文及随文注分层记录",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对短引句和对应段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/滴天髓/10",
+      "base_edition_status": "未据古刻影像校勘；底本及随文注作者未独立核定"
+    },
+    {
+      "source_id": "SRC-DT-12",
+      "book": "滴天髓",
+      "url": "https://zh.wikisource.org/w/index.php?title=滴天髓/12&oldid=844360",
+      "version": "维基文库《滴天髓辑要》衰旺论电子录文，oldid=844360；正文及随文注分层记录",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对短引句和对应段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/滴天髓/12",
+      "base_edition_status": "未据古刻影像校勘；底本及随文注作者未独立核定"
+    },
+    {
+      "source_id": "SRC-DT-16",
+      "book": "滴天髓",
+      "url": "https://zh.wikisource.org/w/index.php?title=滴天髓/16&oldid=844365",
+      "version": "维基文库《滴天髓辑要》寒暖论电子录文，oldid=844365；正文及随文注分层记录",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对短引句和对应段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/滴天髓/16",
+      "base_edition_status": "未据古刻影像校勘；底本及随文注作者未独立核定"
+    },
+    {
+      "source_id": "SRC-DT-17",
+      "book": "滴天髓",
+      "url": "https://zh.wikisource.org/w/index.php?title=滴天髓/17&oldid=844366",
+      "version": "维基文库《滴天髓辑要》月令论电子录文，oldid=844366；正文及随文注分层记录",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对短引句和对应段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/滴天髓/17",
+      "base_edition_status": "未据古刻影像校勘；底本及随文注作者未独立核定"
+    },
+    {
+      "source_id": "SRC-DT-19",
+      "book": "滴天髓",
+      "url": "https://zh.wikisource.org/w/index.php?title=滴天髓/19&oldid=844368",
+      "version": "维基文库《滴天髓辑要》源流论电子录文，oldid=844368；正文及随文注分层记录",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对短引句和对应段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/滴天髓/19",
+      "base_edition_status": "未据古刻影像校勘；底本及随文注作者未独立核定"
+    },
+    {
+      "source_id": "SRC-DT-20",
+      "book": "滴天髓",
+      "url": "https://zh.wikisource.org/w/index.php?title=滴天髓/20&oldid=844370",
+      "version": "维基文库《滴天髓辑要》通隔论电子录文，oldid=844370；正文及随文注分层记录",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对短引句和对应段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/滴天髓/20",
+      "base_edition_status": "未据古刻影像校勘；底本及随文注作者未独立核定"
+    },
+    {
+      "source_id": "SRC-SF-01",
+      "book": "神峰通考",
+      "url": "https://zh.wikisource.org/w/index.php?title=神峰通考&oldid=1378606",
+      "version": "维基文库电子录文，oldid=1378606，2018-03-02修订；页面以简体录入",
+      "access_date": "2026-10-31",
+      "inspection_method": "读取公开原文页，核对病药说类及损益生长四药说类相关段落",
+      "scope": "仅核验所列短引句及所在相关段落，不代表全书校勘或科学预测验证",
+      "reading_url": "https://zh.wikisource.org/wiki/神峰通考",
+      "base_edition_status": "未据古刻影像校勘；录文有疑似讹字，未采疑字作规则"
+    }
+  ],
+  "cards": [
+    {
+      "evidence_id": "CL-ZP-001",
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "chapter": "论用神",
+      "location": "原页十七，篇首第1段（PDF第26页）",
+      "text_layer": "原文",
+      "quote": "專求月令",
+      "paraphrase": "由日干与月支生克先立格局。",
+      "direct_supports": [
+        "月令为格局取用起点。"
+      ],
+      "does_not_support": [
+        "仅凭月支定全部喜忌。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "pdf_pages": [
+        26
+      ]
+    },
+    {
+      "evidence_id": "CL-ZP-002",
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "chapter": "论用神",
+      "location": "原页十七，篇首第1段顺逆用说明（PDF第26页）",
+      "text_layer": "原文",
+      "quote": "而逆用之",
+      "paraphrase": "财官印食与煞伤劫刃分顺逆用。",
+      "direct_supports": [
+        "十神喜忌须看结构配合。"
+      ],
+      "does_not_support": [
+        "某十神在所有命局恒吉恒凶。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "pdf_pages": [
+        26
+      ]
+    },
+    {
+      "evidence_id": "CL-ZP-003",
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "chapter": "论用神成败救应",
+      "location": "原页十九至二十一，篇首及救应段（PDF第28—30页）",
+      "text_layer": "原文",
+      "quote": "有成敗",
+      "paraphrase": "四柱配合可使格局成败互变。",
+      "direct_supports": [
+        "逐格辨成败并检查救应。"
+      ],
+      "does_not_support": [
+        "组合出现就保证现实成就。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "pdf_pages": [
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "evidence_id": "CL-ZP-004",
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "chapter": "论用神变化",
+      "location": "原页二十二，篇首第1段（PDF第31页）",
+      "text_layer": "原文",
+      "quote": "用神遂有變化",
+      "paraphrase": "月支藏干随透干会合而变用。",
+      "direct_supports": [
+        "取用须查透藏与会合。"
+      ],
+      "does_not_support": [
+        "透干或会合必然完全化气。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "pdf_pages": [
+        31
+      ]
+    },
+    {
+      "evidence_id": "CL-ZP-005",
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "chapter": "论用神配气候得失",
+      "location": "原页二十八至三十，篇首及金水伤官例（PDF第37—39页）",
+      "text_layer": "原文",
+      "quote": "須配氣候",
+      "paraphrase": "月令取用还须兼看寒暖气候。",
+      "direct_supports": [
+        "结构判断可兼参调候。"
+      ],
+      "does_not_support": [
+        "一见冬水便机械固定用火。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "pdf_pages": [
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "evidence_id": "CL-ZP-006",
+      "source_id": "SRC-ZP-01",
+      "book": "子平真诠",
+      "chapter": "论相神紧要",
+      "location": "原页三十，篇首第1段（PDF第39页）",
+      "text_layer": "原文",
+      "quote": "相神",
+      "paraphrase": "相神是协助用神成格的关键。",
+      "direct_supports": [
+        "检查成格所依赖的辅助。"
+      ],
+      "does_not_support": [
+        "相神是固定另一颗十神。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "pdf_pages": [
+        39,
+        40
+      ]
+    },
+    {
+      "evidence_id": "CL-DT-001",
+      "source_id": "SRC-DT-12",
+      "book": "滴天髓",
+      "chapter": "衰旺论",
+      "location": "本篇正文后随文注第1段，旺衰反例句",
+      "text_layer": "随文注",
+      "quote": "旺中有衰",
+      "paraphrase": "旺衰内部仍可能有相反因素。",
+      "direct_supports": [
+        "扶抑须审真假强弱和极端。"
+      ],
+      "does_not_support": [
+        "数五行个数即可决定扶抑。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-DT-002",
+      "source_id": "SRC-DT-10",
+      "book": "滴天髓",
+      "chapter": "体用论",
+      "location": "本篇篇首正文第1句",
+      "text_layer": "原文",
+      "quote": "扶之抑之",
+      "paraphrase": "体用判断不宜拘泥单一角度。",
+      "direct_supports": [
+        "说明扶抑须与体用结构相称。"
+      ],
+      "does_not_support": [
+        "各家用神术语完全等同。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-DT-003",
+      "source_id": "SRC-DT-16",
+      "book": "滴天髓",
+      "chapter": "寒暖论",
+      "location": "本篇第1条正文及随文注",
+      "text_layer": "原文",
+      "quote": "寒暖",
+      "paraphrase": "寒暖过度在本篇属于失衡。",
+      "direct_supports": [
+        "把寒暖作为独立观察维度。"
+      ],
+      "does_not_support": [
+        "寒暖描述等同现实健康诊断。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-DT-004",
+      "source_id": "SRC-DT-16",
+      "book": "滴天髓",
+      "chapter": "寒暖论",
+      "location": "本篇第2条正文及随文注",
+      "text_layer": "原文",
+      "quote": "燥濕",
+      "paraphrase": "燥湿也须结合全局避免偏枯。",
+      "direct_supports": [
+        "燥湿与寒暖分别检查。"
+      ],
+      "does_not_support": [
+        "某五行出现必为燥或湿。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-DT-005",
+      "source_id": "SRC-DT-19",
+      "book": "滴天髓",
+      "chapter": "源流论",
+      "location": "本篇正文后随文注第1段，首个命例之前",
+      "text_layer": "随文注",
+      "quote": "所喜之神",
+      "paraphrase": "观察旺气源头及生化终点。",
+      "direct_supports": [
+        "检查流通所至是否合喜忌。"
+      ],
+      "does_not_support": [
+        "任何相生链越长越吉。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-DT-006",
+      "source_id": "SRC-DT-20",
+      "book": "滴天髓",
+      "chapter": "通隔论",
+      "location": "本篇正文后随文注第1段，通关条件说明",
+      "text_layer": "随文注",
+      "quote": "去其間阻",
+      "paraphrase": "通关须能实际解除局内阻隔。",
+      "direct_supports": [
+        "辨阻隔原因再找通关条件。"
+      ],
+      "does_not_support": [
+        "补入中间五行便保证通关。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-DT-007",
+      "source_id": "SRC-DT-17",
+      "book": "滴天髓",
+      "chapter": "月令论",
+      "location": "本篇篇首正文，宅向之喻",
+      "text_layer": "原文",
+      "quote": "人元用事",
+      "paraphrase": "月令与支中用事之气要分辨。",
+      "direct_supports": [
+        "月令不能只作地支名称看。"
+      ],
+      "does_not_support": [
+        "本引句证明固定分日表无争议。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-SF-001",
+      "source_id": "SRC-SF-01",
+      "book": "神峰通考",
+      "chapter": "病药说类",
+      "location": "本节首段，病与药的定义句",
+      "text_layer": "原文",
+      "quote": "原八字中原所害之神也",
+      "paraphrase": "病指结构所受之害，药用于解害。",
+      "direct_supports": [
+        "先定具体结构问题再谈去病。"
+      ],
+      "does_not_support": [
+        "命理病药等于人体疾病用药。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-SF-002",
+      "source_id": "SRC-SF-01",
+      "book": "神峰通考",
+      "chapter": "病药说类",
+      "location": "本节中段，日干、月令、各火一处看之后",
+      "text_layer": "原文",
+      "quote": "从重者论",
+      "paraphrase": "先聚焦月令所引的主要结构。",
+      "direct_supports": [
+        "病药下手先抓主要矛盾。"
+      ],
+      "does_not_support": [
+        "可永久忽略其余干支配合。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果"
+    },
+    {
+      "evidence_id": "CL-SF-003",
+      "source_id": "SRC-SF-01",
+      "book": "神峰通考",
+      "chapter": "损益生长四药说类",
+      "location": "本节前两段，损与益定义句",
+      "text_layer": "原文",
+      "quote": "损其有余",
+      "paraphrase": "损有余、益不足须先辨所病。",
+      "direct_supports": [
+        "按对象和过不及选择损益。"
+      ],
+      "does_not_support": [
+        "一概抑强扶弱便覆盖全部八法。"
+      ],
+      "verification_status": "verified_text",
+      "verification_scope": "仅上述引句及相关段落的文本核验；不核验历史生辰或现实因果",
+      "additional_quotes": [
+        "益其不及"
+      ]
+    }
+  ],
+  "limits": [
+    "这16条是有限核心证据集，不是全书考证。",
+    "verified_text只表示已检查指定来源中的相关文字，不表示预测有效或生辰真实。",
+    "既有48份提炼文档缺少原提炼稿的，不因本证据集而自动转为已核验。",
+    "不同书的用神、体用、相神术语不应无条件互换。"
+  ]
+}

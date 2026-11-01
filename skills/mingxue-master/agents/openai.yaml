@@ -1,0 +1,8 @@
+interface:
+  display_name: "综合命理"
+  short_description: "互动抽牌、白话命理与个人双人图文报告及PDF"
+  default_prompt: "请使用 $mingxue-master，先填写资料并按需亲自抽牌，综合现有25类方法的可用结果，写详细白话和综合分析，生成敦煌青金风格个人或双人报告，分项点击阅读并支持导出PDF。"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+policy:
+  allow_implicit_invocation: true
